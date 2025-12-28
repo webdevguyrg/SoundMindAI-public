@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMindAI - Record, Transcribe & Summarize with AI</title>
+    <meta name="description" content="Capture system audio and microphone, transcribe with AI, and get intelligent summaries. Native macOS app that works with your own API keys. No subscriptions, no cloud dependency.">
+    <meta name="keywords" content="audio recording, transcription, AI summarization, macOS app, meeting recorder, Whisper, ChatGPT, Claude AI, voice notes, productivity">
+    <meta name="author" content="GrowTech Development, LLC">
+    <link rel="canonical" href="https://soundmindai.net/">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soundmindai.net/">
+    <meta property="og:title" content="SoundMindAI - Record, Transcribe & Summarize with AI">
+    <meta property="og:description" content="Capture system audio and microphone, transcribe with AI, and get intelligent summaries. Native macOS app with BYOK.">
+    <meta property="og:image" content="https://soundmindai.net/images/og-image.png">
+    <meta property="og:site_name" content="SoundMindAI">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoundMindAI - Record, Transcribe & Summarize with AI">
+    <meta name="twitter:description" content="Capture audio, transcribe, and summarize with AI. Native macOS app.">
+    <meta name="twitter:image" content="https://soundmindai.net/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/icon.png">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SoundMindAI",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "macOS",
+      "offers": {
+        "@type": "Offer",
+        "price": "29.95",
+        "priceCurrency": "USD"
+      },
+      "description": "Record system audio and microphone, transcribe with AI, and get intelligent summaries. Native macOS app with Bring Your Own Keys.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "GrowTech Development, LLC"
+      }
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Variables - Based on App Logo Colors */
+        :root {
+            --primary-blue: #60A5FA;
+            --primary-purple: #A78BFA;
+            --accent-light: #7DD3FC;
+            --bg-dark: #1E293B;
+            --bg-darker: #0F172A;
+            --gradient-start: #60A5FA;
+            --gradient-end: #A78BFA;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --text-light: #94A3B8;
+            --bg-white: #FFFFFF;
+            --bg-light: #F8FAFC;
+            --bg-section: #F1F5F9;
+            --border: #E2E8F0;
+            --success: #34D399;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+            --radius: 12px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+        }
+
+        /* Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-white);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section--alt {
+            background: var(--bg-section);
+        }
+
+        .section-eyebrow {
+            display: inline-block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 980px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            box-shadow: 0 4px 14px rgba(96, 165, 250, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(96, 165, 250, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 1.125rem;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 160px 0 100px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--bg-white) 100%);
+        }
+
+        .hero-logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 32px;
+            border-radius: 22px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 6vw, 3.75rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--text-primary);
+        }
+
+        .hero-title .gradient {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-description {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .hero-meta {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-meta-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--success);
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 64px;
+        }
+
+        @media (max-width: 968px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .feature-card {
+            padding: 32px;
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .feature-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        /* BYOK Section */
+        .byok-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        @media (max-width: 868px) {
+            .byok-content {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+        }
+
+        .byok-text h2 {
+            margin-bottom: 20px;
+        }
+
+        .byok-text > p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+
+        .byok-benefits {
+            list-style: none;
+        }
+
+        .byok-benefit {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        .byok-benefit svg {
+            width: 24px;
+            height: 24px;
+            color: var(--success);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .byok-providers {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .byok-providers h3 {
+            font-size: 1.25rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: var(--text-primary);
+        }
+
+        .provider-category {
+            margin-bottom: 24px;
+        }
+
+        .provider-category:last-child {
+            margin-bottom: 0;
+        }
+
+        .provider-category-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .provider-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .provider {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+
+        .provider-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .request-link {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .request-link a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .request-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pricing */
+        .pricing-card {
+            max-width: 420px;
+            margin: 48px auto 0;
+            background: var(--bg-white);
+            border: 2px solid var(--primary-blue);
+            border-radius: var(--radius-xl);
+            padding: 48px;
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .pricing-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 6px 16px;
+            border-radius: 980px;
+            margin-bottom: 24px;
+        }
+
+        .pricing-price {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .pricing-term {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 32px;
+        }
+
+        .pricing-feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-primary);
+        }
+
+        .pricing-feature:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-feature svg {
+            width: 20px;
+            height: 20px;
+            color: var(--success);
+            flex-shrink: 0;
+        }
+
+        .pricing-trial {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Requirements */
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 768px) {
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .requirement {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+        }
+
+        .requirement-icon {
+            font-size: 2rem;
+        }
+
+        .requirement-text strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+
+        .requirement-text span {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--bg-dark);
+            color: white;
+            text-align: center;
+        }
+
+        .cta .section-title {
+            color: white;
+        }
+
+        .cta .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .cta-contact {
+            margin-top: 40px;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .cta-contact a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .cta-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-light);
+            padding: 40px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .footer-links a {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-blue);
+        }
+
+        .footer-copyright {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section {
+                padding: 64px 0;
+            }
+
+            .hero {
+                padding: 120px 0 64px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="images/icon.png" alt="SoundMindAI">
+                SoundMindAI
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#byok">BYOK</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="#download" class="btn btn-primary" style="padding: 10px 20px;">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <img src="images/icon.png" alt="SoundMindAI" class="hero-logo">
+            <h1 class="hero-title">
+                Record. Transcribe.<br><span class="gradient">Summarize with AI.</span>
+            </h1>
+            <p class="hero-description">
+                Capture everything you hear on your Mac, transcribe it with AI, and get intelligent summaries and action items. Use your own API keys. No subscriptions.
+            </p>
+            <div class="hero-cta">
+                <a href="#download" class="btn btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download Free Trial
+                </a>
+                <a href="#features" class="btn btn-secondary btn-large">Learn More</a>
+            </div>
+            <div class="hero-meta">
+                <div class="hero-meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    7-day free trial
+                </div>
+                <div class="hero-meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    macOS 13+ required
+                </div>
+                <div class="hero-meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    100% local storage
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section section--alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-eyebrow">Features</span>
+                <h2 class="section-title">Everything you need to capture and understand</h2>
+                <p class="section-subtitle mx-auto">
+                    From Zoom meetings to YouTube videos, SoundMindAI records, transcribes, and summarizes so you can focus on what matters.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3 class="feature-title">Capture Everything</h3>
+                    <p class="feature-description">
+                        Record system audio and microphone simultaneously. Zoom, Teams, YouTube, podcasts - anything you can hear.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3 class="feature-title">AI Transcription</h3>
+                    <p class="feature-description">
+                        Convert speech to text with OpenAI Whisper or AssemblyAI. Accurate, timestamped transcripts ready in minutes.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3 class="feature-title">Smart Summaries</h3>
+                    <p class="feature-description">
+                        Get AI-generated summaries, bullet points, and action items. Choose from Claude, GPT-4, Gemini, and more.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏷️</div>
+                    <h3 class="feature-title">Stay Organized</h3>
+                    <p class="feature-description">
+                        Tag, search, and filter your recordings. Find any meeting or note instantly with full-text search.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3 class="feature-title">Click-to-Seek</h3>
+                    <p class="feature-description">
+                        Jump to any moment in your recording. Click on any transcript line to hear exactly what was said.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📤</div>
+                    <h3 class="feature-title">Export Anywhere</h3>
+                    <p class="feature-description">
+                        Export transcripts and summaries as TXT, Markdown, or HTML. Copy to clipboard with one click.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BYOK Section -->
+    <section id="byok" class="section">
+        <div class="container">
+            <div class="byok-content">
+                <div class="byok-text">
+                    <span class="section-eyebrow">Bring Your Own Keys</span>
+                    <h2 class="section-title">You control your AI</h2>
+                    <p>
+                        SoundMindAI uses a <strong>BYOK (Bring Your Own Keys)</strong> model. You provide your own API keys from providers like OpenAI, Anthropic, or Google. This means:
+                    </p>
+                    <ul class="byok-benefits">
+                        <li class="byok-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>No middleman fees</strong> - Pay providers directly at their rates</span>
+                        </li>
+                        <li class="byok-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>Your data stays yours</strong> - We never see your recordings or transcripts</span>
+                        </li>
+                        <li class="byok-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>Choose your provider</strong> - Switch between AI models anytime</span>
+                        </li>
+                        <li class="byok-benefit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                            <span><strong>No subscriptions</strong> - Buy once, use forever</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="byok-providers">
+                    <h3>Supported Providers</h3>
+                    <div class="provider-category">
+                        <div class="provider-category-title">Transcription</div>
+                        <div class="provider-list">
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #10a37f;">W</div>
+                                OpenAI Whisper
+                            </div>
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #0066ff;">A</div>
+                                AssemblyAI
+                            </div>
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #1E293B;">🍎</div>
+                                Apple Speech (Free)
+                            </div>
+                        </div>
+                    </div>
+                    <div class="provider-category">
+                        <div class="provider-category-title">AI Summarization</div>
+                        <div class="provider-list">
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #cc785c;">C</div>
+                                Anthropic Claude
+                            </div>
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #10a37f;">G</div>
+                                OpenAI GPT-4
+                            </div>
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #4285f4;">G</div>
+                                Google Gemini
+                            </div>
+                            <div class="provider">
+                                <div class="provider-icon" style="background: #ff6f00;">H</div>
+                                HuggingFace
+                            </div>
+                        </div>
+                    </div>
+                    <p class="request-link">
+                        Don't see your provider? <a href="mailto:rgrow@growtechinc.com">Request support</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="section section--alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-eyebrow">Pricing</span>
+                <h2 class="section-title">Simple, one-time pricing</h2>
+                <p class="section-subtitle mx-auto">
+                    No subscriptions. No hidden fees. Buy once, own forever.
+                </p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-badge">Lifetime License</div>
+                <div class="pricing-price">$29.95</div>
+                <div class="pricing-term">One-time payment</div>
+                <ul class="pricing-features">
+                    <li class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        All recording and playback features
+                    </li>
+                    <li class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        All AI transcription providers (BYOK)
+                    </li>
+                    <li class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        All AI summarization providers (BYOK)
+                    </li>
+                    <li class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Activate on up to 3 Macs
+                    </li>
+                    <li class="pricing-feature">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"/>
+                        </svg>
+                        Lifetime updates included
+                    </li>
+                </ul>
+                <a href="#download" class="btn btn-primary btn-large" style="width: 100%;">Start Free Trial</a>
+                <p class="pricing-trial">7-day free trial. No credit card required.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Requirements -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-eyebrow">Requirements</span>
+                <h2 class="section-title">What you need</h2>
+            </div>
+            <div class="requirements-grid">
+                <div class="requirement">
+                    <div class="requirement-icon">💻</div>
+                    <div class="requirement-text">
+                        <strong>macOS 13+</strong>
+                        <span>Ventura or later required</span>
+                    </div>
+                </div>
+                <div class="requirement">
+                    <div class="requirement-icon">🔐</div>
+                    <div class="requirement-text">
+                        <strong>Screen Recording Permission</strong>
+                        <span>For system audio capture</span>
+                    </div>
+                </div>
+                <div class="requirement">
+                    <div class="requirement-icon">🔑</div>
+                    <div class="requirement-text">
+                        <strong>API Keys (Optional)</strong>
+                        <span>For AI transcription & summaries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="download" class="section cta">
+        <div class="container">
+            <h2 class="section-title">Ready to transform how you capture meetings?</h2>
+            <p class="section-subtitle mx-auto">
+                Start your 7-day free trial today. No credit card required.
+            </p>
+            <div style="margin-top: 32px;">
+                <a href="#" class="btn btn-primary btn-large" style="background: white; color: #1E293B;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download for macOS
+                </a>
+            </div>
+            <p class="cta-contact">
+                Have questions or feature requests?<br>
+                Contact us at <a href="mailto:rgrow@growtechinc.com">rgrow@growtechinc.com</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="faq.html">FAQ & Guide</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="mailto:rgrow@growtechinc.com">Contact</a></li>
+                </ul>
+                <p class="footer-copyright">
+                    &copy; 2025 GrowTech Development, LLC. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

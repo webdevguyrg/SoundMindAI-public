@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ & User Guide - SoundMindAI</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="images/icon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <img src="images/logo.svg" alt="SoundMindAI" style="width: 28px; height: 28px;">
+                SoundMindAI
+            </a>
+            <ul class="nav__links">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="faq.html" class="nav__link">FAQ</a></li>
+                <li><a href="privacy.html" class="nav__link">Privacy</a></li>
+                <li><a href="terms.html" class="nav__link">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- FAQ Content -->
+    <main class="faq-page">
+        <div class="container">
+            <h1 class="faq-title">FAQ & User Guide</h1>
+            <p class="faq-subtitle">Everything you need to know about using SoundMindAI, from recording your first meeting to setting up AI-powered transcription and summarization.</p>
+
+            <!-- Quick Navigation -->
+            <nav class="faq-nav">
+                <a href="#getting-started" class="faq-nav__link">Getting Started</a>
+                <a href="#recording" class="faq-nav__link">Recording</a>
+                <a href="#transcription" class="faq-nav__link">Transcription</a>
+                <a href="#summarization" class="faq-nav__link">AI Summarization</a>
+                <a href="#byok" class="faq-nav__link">BYOK Explained</a>
+                <a href="#api-setup" class="faq-nav__link">API Setup</a>
+                <a href="#organization" class="faq-nav__link">Organization</a>
+                <a href="#playback" class="faq-nav__link">Playback</a>
+                <a href="#troubleshooting" class="faq-nav__link">Troubleshooting</a>
+            </nav>
+
+            <!-- Getting Started -->
+            <section id="getting-started" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#127919;</span>
+                    Getting Started
+                </h2>
+
+                <details class="faq-item">
+                    <summary>What is SoundMindAI?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI is a native macOS application that helps you capture, transcribe, and understand audio content. Whether you're recording meetings, lectures, interviews, or podcasts, SoundMindAI transforms spoken words into organized, searchable text with AI-powered insights.</p>
+                        <p><strong>Key capabilities:</strong></p>
+                        <ul>
+                            <li>Record system audio and microphone simultaneously</li>
+                            <li>Import existing audio files</li>
+                            <li>Transcribe with Apple Speech (free) or premium AI services</li>
+                            <li>Generate summaries, key points, and action items using AI</li>
+                            <li>Organize recordings with tags, folders, and search</li>
+                            <li>Export in multiple formats</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What are the system requirements?</summary>
+                    <div class="faq-item__content">
+                        <ul>
+                            <li><strong>macOS:</strong> macOS 13 (Ventura) or later</li>
+                            <li><strong>Processor:</strong> Apple Silicon or Intel Mac</li>
+                            <li><strong>Storage:</strong> 100 MB for the app, plus space for recordings</li>
+                            <li><strong>Permissions:</strong> Screen Recording (for system audio) and Microphone access</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Screen Recording permission is required even for audio-only capture because macOS uses ScreenCaptureKit for system audio access.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I grant the required permissions?</summary>
+                    <div class="faq-item__content">
+                        <p>On first launch, SoundMindAI will request the necessary permissions. If you need to enable them manually:</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Open System Settings</h4>
+                                <p>Click the Apple menu > System Settings > Privacy & Security</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enable Screen Recording</h4>
+                                <p>Select "Screen Recording" from the list and toggle on SoundMindAI</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enable Microphone Access</h4>
+                                <p>Select "Microphone" from the list and toggle on SoundMindAI</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Restart the App</h4>
+                                <p>Quit and relaunch SoundMindAI for permissions to take effect</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How does the 7-day free trial work?</summary>
+                    <div class="faq-item__content">
+                        <p>The free trial gives you <strong>full access to all features</strong> for 7 days. No credit card required.</p>
+                        <ul>
+                            <li>Trial starts when you click "Start Free Trial"</li>
+                            <li>All features are unlocked including BYOK AI services</li>
+                            <li>Trial is tied to your Mac (hardware-based), not your email</li>
+                            <li>After 7 days, purchase a license or continue with limited features</li>
+                        </ul>
+                        <p><strong>After trial expires:</strong> You can still record and use Apple Speech transcription. BYOK AI features require a license.</p>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Recording -->
+            <section id="recording" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#127908;</span>
+                    Recording
+                </h2>
+
+                <details class="faq-item">
+                    <summary>How do I start a recording?</summary>
+                    <div class="faq-item__content">
+                        <p>Starting a recording is simple:</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Click the Record Button</h4>
+                                <p>Click the large red record button on the main screen, or use the keyboard shortcut</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Select Audio Sources</h4>
+                                <p>Choose to record system audio, microphone, or both</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Start Recording</h4>
+                                <p>The timer will start and you'll see a visual indicator that recording is active</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Stop When Done</h4>
+                                <p>Click the stop button or use the keyboard shortcut to end the recording</p>
+                            </div>
+                        </div>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> You can pause and resume recordings without creating multiple files.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I record system audio from specific applications?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI captures all system audio output. To record specific applications:</p>
+                        <ul>
+                            <li>Mute applications you don't want to record</li>
+                            <li>Use the application's own audio settings to control volume</li>
+                            <li>Consider using a virtual audio device for more control</li>
+                        </ul>
+                        <p>Future versions may include per-application audio selection.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I import existing audio files?</summary>
+                    <div class="faq-item__content">
+                        <p>You can import audio files for transcription:</p>
+                        <ul>
+                            <li>Drag and drop audio files onto the SoundMindAI window</li>
+                            <li>Use File > Import Audio or the keyboard shortcut</li>
+                            <li>Select files from the file browser</li>
+                        </ul>
+                        <p><strong>Supported formats:</strong> M4A, MP3, WAV, CAF, AIFF, MP4, MOV</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Where are my recordings stored?</summary>
+                    <div class="faq-item__content">
+                        <p>By default, recordings are stored in:</p>
+                        <code>~/Library/Application Support/SoundMindAI/Recordings/</code>
+                        <p>You can change the storage location in Settings > Storage. All recordings remain on your Mac - nothing is uploaded to the cloud.</p>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Transcription -->
+            <section id="transcription" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#128221;</span>
+                    Transcription
+                </h2>
+
+                <details class="faq-item">
+                    <summary>What transcription options are available?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI offers multiple transcription options:</p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--color-border);">
+                                    <th style="text-align: left; padding: 0.5rem;">Service</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Cost</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Speed</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.5rem;"><strong>Apple Speech</strong></td>
+                                    <td style="padding: 0.5rem;">Free (built-in)</td>
+                                    <td style="padding: 0.5rem;">Fast</td>
+                                    <td style="padding: 0.5rem;">Good</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.5rem;"><strong>OpenAI Whisper</strong></td>
+                                    <td style="padding: 0.5rem;">~$0.006/min</td>
+                                    <td style="padding: 0.5rem;">Fast</td>
+                                    <td style="padding: 0.5rem;">Excellent</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem;"><strong>AssemblyAI</strong></td>
+                                    <td style="padding: 0.5rem;">~$0.0065/min</td>
+                                    <td style="padding: 0.5rem;">Fast</td>
+                                    <td style="padding: 0.5rem;">Excellent</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Apple Speech</strong> requires no setup and works offline. BYOK services offer higher accuracy but require API keys.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I transcribe a recording?</summary>
+                    <div class="faq-item__content">
+                        <p>After recording or importing audio:</p>
+                        <ol>
+                            <li>Select the recording from your library</li>
+                            <li>Click "Transcribe" or use the keyboard shortcut</li>
+                            <li>Choose your transcription service (Apple Speech or BYOK)</li>
+                            <li>Wait for transcription to complete</li>
+                        </ol>
+                        <p>Transcripts appear in the detail view with timestamps for easy navigation.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I edit transcripts?</summary>
+                    <div class="faq-item__content">
+                        <p>Yes! You can edit transcripts to fix errors:</p>
+                        <ul>
+                            <li>Click on the transcript text to enter edit mode</li>
+                            <li>Make corrections directly in the text</li>
+                            <li>Changes are saved automatically</li>
+                            <li>Original timestamps are preserved</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <!-- AI Summarization -->
+            <section id="summarization" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#129302;</span>
+                    AI Summarization
+                </h2>
+
+                <details class="faq-item">
+                    <summary>What AI summaries does SoundMindAI generate?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI uses AI to extract meaningful insights from your transcripts:</p>
+                        <ul>
+                            <li><strong>Summary:</strong> Concise overview of the content</li>
+                            <li><strong>Key Points:</strong> Important highlights and takeaways</li>
+                            <li><strong>Action Items:</strong> Tasks and follow-ups identified from the conversation</li>
+                        </ul>
+                        <p>Each item includes timestamps so you can jump to the relevant part of the recording.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Which AI providers are supported?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI supports multiple AI providers for summarization:</p>
+                        <ul>
+                            <li><strong>OpenAI</strong> - GPT-4o, GPT-4, GPT-3.5-turbo</li>
+                            <li><strong>Anthropic</strong> - Claude 3.5 Sonnet, Claude 3 Opus</li>
+                            <li><strong>Google</strong> - Gemini 1.5 Pro, Gemini 1.5 Flash</li>
+                            <li><strong>HuggingFace</strong> - Various open-source models</li>
+                            <li><strong>OpenRouter</strong> - Access multiple providers through one API</li>
+                        </ul>
+                        <p>Each provider has different strengths - experiment to find what works best for your content.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How much does AI summarization cost?</summary>
+                    <div class="faq-item__content">
+                        <p>Costs vary by provider and model. Typical costs for summarizing a 1-hour transcript:</p>
+                        <ul>
+                            <li><strong>GPT-4o:</strong> ~$0.05-0.15</li>
+                            <li><strong>GPT-3.5-turbo:</strong> ~$0.01-0.03</li>
+                            <li><strong>Claude 3.5 Sonnet:</strong> ~$0.05-0.10</li>
+                            <li><strong>Gemini 1.5 Flash:</strong> ~$0.01-0.02</li>
+                        </ul>
+                        <p>Costs depend on transcript length. You pay directly to your chosen provider - SoundMindAI doesn't add any markup.</p>
+                    </div>
+                </details>
+            </section>
+
+            <!-- BYOK Explained -->
+            <section id="byok" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#128273;</span>
+                    BYOK (Bring Your Own Keys) Explained
+                </h2>
+
+                <details class="faq-item" open>
+                    <summary>What does BYOK mean?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>BYOK stands for "Bring Your Own Keys."</strong> Instead of us charging you for AI services, you get API keys directly from the service providers (like OpenAI or Anthropic) and enter them in SoundMindAI.</p>
+                        <p><strong>Here's how it works:</strong></p>
+                        <ol>
+                            <li>You create an account with an AI provider (e.g., OpenAI)</li>
+                            <li>You add payment and get an API key from them</li>
+                            <li>You enter that API key in SoundMindAI's settings</li>
+                            <li>SoundMindAI uses your key to access the AI service</li>
+                            <li>You pay the provider directly based on your usage</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Why does SoundMindAI use BYOK instead of including AI?</summary>
+                    <div class="faq-item__content">
+                        <p>BYOK offers significant advantages for you:</p>
+                        <ul>
+                            <li><strong>Lower cost:</strong> Pay wholesale rates directly to providers instead of marked-up prices</li>
+                            <li><strong>Choice:</strong> Pick the AI provider and model that works best for you</li>
+                            <li><strong>Privacy:</strong> Your data goes directly to the provider - we never see it</li>
+                            <li><strong>Control:</strong> Set your own usage limits and budgets</li>
+                            <li><strong>No subscription:</strong> Pay only for what you use, when you use it</li>
+                        </ul>
+                        <div class="warning-box">
+                            <strong>Note:</strong> You are responsible for understanding and managing costs with each AI provider. We recommend setting usage limits in your provider accounts.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Are my API keys secure?</summary>
+                    <div class="faq-item__content">
+                        <p>Yes, your API keys are stored securely:</p>
+                        <ul>
+                            <li>Keys are stored in <strong>macOS Keychain</strong>, the same place your passwords are stored</li>
+                            <li>Keys are encrypted using macOS system-level encryption</li>
+                            <li>Keys never leave your Mac (except when making API calls to providers)</li>
+                            <li>We cannot access, view, or retrieve your keys</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+
+            <!-- API Setup Guides -->
+            <section id="api-setup" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#128736;</span>
+                    API Setup Guides
+                </h2>
+
+                <details class="faq-item">
+                    <summary>How to set up OpenAI (Whisper + GPT)</summary>
+                    <div class="faq-item__content">
+                        <p>OpenAI provides both Whisper (transcription) and GPT (summarization):</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Create an OpenAI Account</h4>
+                                <p>Go to <a href="https://platform.openai.com/signup" target="_blank" rel="noopener">platform.openai.com/signup</a> and create an account</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Add Payment Method</h4>
+                                <p>Go to Settings > Billing and add a credit card. New accounts may receive free credits.</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Generate API Key</h4>
+                                <p>Go to API Keys section, click "Create new secret key", and copy it immediately (you won't see it again)</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enter Key in SoundMindAI</h4>
+                                <p>Open SoundMindAI Settings > API Keys > OpenAI and paste your key</p>
+                            </div>
+                        </div>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Set a monthly usage limit in OpenAI's settings to avoid unexpected charges.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How to set up Anthropic (Claude)</summary>
+                    <div class="faq-item__content">
+                        <p>Anthropic provides Claude for AI summarization:</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Create an Anthropic Account</h4>
+                                <p>Go to <a href="https://console.anthropic.com/" target="_blank" rel="noopener">console.anthropic.com</a> and sign up</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Add Payment Method</h4>
+                                <p>Navigate to Billing and add a payment method</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Generate API Key</h4>
+                                <p>Go to API Keys, create a new key, and copy it</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enter Key in SoundMindAI</h4>
+                                <p>Open SoundMindAI Settings > API Keys > Anthropic and paste your key</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How to set up Google (Gemini)</summary>
+                    <div class="faq-item__content">
+                        <p>Google provides Gemini for AI summarization:</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Go to Google AI Studio</h4>
+                                <p>Visit <a href="https://aistudio.google.com/" target="_blank" rel="noopener">aistudio.google.com</a> and sign in with your Google account</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Get API Key</h4>
+                                <p>Click "Get API Key" in the left sidebar, then "Create API key"</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Copy Your Key</h4>
+                                <p>Copy the generated API key</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enter Key in SoundMindAI</h4>
+                                <p>Open SoundMindAI Settings > API Keys > Google and paste your key</p>
+                            </div>
+                        </div>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Google offers a generous free tier for Gemini. Check current limits at Google AI Studio.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How to set up AssemblyAI (Transcription)</summary>
+                    <div class="faq-item__content">
+                        <p>AssemblyAI provides high-quality transcription:</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Create AssemblyAI Account</h4>
+                                <p>Go to <a href="https://www.assemblyai.com/" target="_blank" rel="noopener">assemblyai.com</a> and sign up</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Get Your API Key</h4>
+                                <p>Your API key is shown on your dashboard immediately after signing up</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Add Credits</h4>
+                                <p>Go to Billing to add credits or set up a payment method</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enter Key in SoundMindAI</h4>
+                                <p>Open SoundMindAI Settings > API Keys > AssemblyAI and paste your key</p>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How to set up OpenRouter (Multiple Providers)</summary>
+                    <div class="faq-item__content">
+                        <p>OpenRouter lets you access multiple AI providers with one API key:</p>
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Create OpenRouter Account</h4>
+                                <p>Go to <a href="https://openrouter.ai/" target="_blank" rel="noopener">openrouter.ai</a> and sign up</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Add Credits</h4>
+                                <p>Add credits to your account in the Billing section</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Get API Key</h4>
+                                <p>Go to Keys section and create a new API key</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Enter Key in SoundMindAI</h4>
+                                <p>Open SoundMindAI Settings > API Keys > OpenRouter and paste your key</p>
+                            </div>
+                        </div>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> OpenRouter is great if you want to try different models without setting up multiple accounts.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Organization -->
+            <section id="organization" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#128193;</span>
+                    Organization & Management
+                </h2>
+
+                <details class="faq-item">
+                    <summary>How do I organize my recordings?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI provides several ways to organize your recordings:</p>
+                        <ul>
+                            <li><strong>Tags:</strong> Add custom tags with colors to categorize recordings</li>
+                            <li><strong>Folders:</strong> Create folders to group related recordings</li>
+                            <li><strong>Search:</strong> Search by title, transcript content, or tags</li>
+                            <li><strong>Sort:</strong> Sort by date, duration, or name</li>
+                            <li><strong>Filter:</strong> Filter by tags, date range, or transcription status</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I add tags to recordings?</summary>
+                    <div class="faq-item__content">
+                        <p>To add tags:</p>
+                        <ol>
+                            <li>Select a recording from your library</li>
+                            <li>Click the Tags section in the detail view</li>
+                            <li>Type a tag name and press Enter, or select from existing tags</li>
+                            <li>Click the color dot to change tag color</li>
+                        </ol>
+                        <p>You can also batch-tag multiple recordings by selecting them first.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I export my recordings and transcripts?</summary>
+                    <div class="faq-item__content">
+                        <p>Yes! Export options include:</p>
+                        <ul>
+                            <li><strong>Audio:</strong> Export original audio file (M4A)</li>
+                            <li><strong>Transcript:</strong> Export as plain text, markdown, or SRT subtitles</li>
+                            <li><strong>Summary:</strong> Export summary, key points, and action items</li>
+                            <li><strong>Combined:</strong> Export everything in one package</li>
+                        </ul>
+                        <p>Use File > Export or right-click on a recording to access export options.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I delete recordings?</summary>
+                    <div class="faq-item__content">
+                        <p>To delete recordings:</p>
+                        <ol>
+                            <li>Select the recording(s) you want to delete</li>
+                            <li>Press Delete or right-click and select "Delete"</li>
+                            <li>Confirm deletion in the dialog</li>
+                        </ol>
+                        <div class="warning-box">
+                            <strong>Warning:</strong> Deleted recordings are permanently removed. Consider exporting important recordings before deleting.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Playback -->
+            <section id="playback" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#9654;&#65039;</span>
+                    Playback
+                </h2>
+
+                <details class="faq-item">
+                    <summary>How do I play back recordings?</summary>
+                    <div class="faq-item__content">
+                        <p>Select a recording and use the built-in player:</p>
+                        <ul>
+                            <li><strong>Play/Pause:</strong> Space bar or play button</li>
+                            <li><strong>Seek:</strong> Click anywhere on the timeline</li>
+                            <li><strong>Skip:</strong> Arrow keys for 5-second jumps</li>
+                            <li><strong>Speed:</strong> Adjust playback speed (0.5x to 2x)</li>
+                            <li><strong>Volume:</strong> Use the volume slider</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Can I jump to specific parts of a recording?</summary>
+                    <div class="faq-item__content">
+                        <p>Yes! Click on any timestamped item to jump to that position:</p>
+                        <ul>
+                            <li>Click transcript segments to jump to that part</li>
+                            <li>Click key points to hear the relevant section</li>
+                            <li>Click action items to hear the context</li>
+                        </ul>
+                        <p>Timestamps are clickable throughout the interface.</p>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Troubleshooting -->
+            <section id="troubleshooting" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#128295;</span>
+                    Troubleshooting
+                </h2>
+
+                <details class="faq-item">
+                    <summary>Recording isn't capturing system audio</summary>
+                    <div class="faq-item__content">
+                        <p>If system audio isn't being captured:</p>
+                        <ol>
+                            <li><strong>Check Screen Recording permission:</strong> System Settings > Privacy & Security > Screen Recording. Ensure SoundMindAI is enabled.</li>
+                            <li><strong>Restart the app:</strong> Quit and relaunch SoundMindAI after granting permission.</li>
+                            <li><strong>Check audio source:</strong> Ensure "System Audio" is selected in recording settings.</li>
+                            <li><strong>Test with another app:</strong> Play audio from any app while recording to verify.</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Transcription is failing or stuck</summary>
+                    <div class="faq-item__content">
+                        <p>If transcription isn't working:</p>
+                        <ul>
+                            <li><strong>Apple Speech:</strong> Ensure your Mac has an internet connection (required for some languages)</li>
+                            <li><strong>BYOK services:</strong> Verify your API key is correct in Settings</li>
+                            <li><strong>Check credits:</strong> Ensure you have available credits/balance with your AI provider</li>
+                            <li><strong>File format:</strong> Ensure the audio file is in a supported format</li>
+                            <li><strong>File size:</strong> Very long recordings may need to be split</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>API key errors</summary>
+                    <div class="faq-item__content">
+                        <p>If you're seeing API key errors:</p>
+                        <ul>
+                            <li><strong>Invalid key:</strong> Double-check you copied the entire key with no extra spaces</li>
+                            <li><strong>Expired key:</strong> Some providers expire unused keys. Generate a new one.</li>
+                            <li><strong>No credits:</strong> Check your provider account for available balance</li>
+                            <li><strong>Rate limited:</strong> Wait a moment and try again</li>
+                        </ul>
+                        <p>You can test your API keys in Settings by clicking the "Test" button next to each key.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I contact support?</summary>
+                    <div class="faq-item__content">
+                        <p>For support, please email us at:</p>
+                        <p><a href="mailto:rgrow@growtechinc.com">rgrow@growtechinc.com</a></p>
+                        <p>Please include:</p>
+                        <ul>
+                            <li>Description of the issue</li>
+                            <li>macOS version</li>
+                            <li>SoundMindAI version (from About menu)</li>
+                            <li>Steps to reproduce the problem</li>
+                            <li>Any error messages you see</li>
+                        </ul>
+                    </div>
+                </details>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2024 GrowTech Development, LLC. All rights reserved.</p>
+                <ul class="footer__links">
+                    <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer__link">Terms of Service</a></li>
+                    <li><a href="mailto:rgrow@growtechinc.com" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
