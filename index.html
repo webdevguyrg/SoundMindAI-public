@@ -24,7 +24,6 @@
     <meta name="twitter:image" content="https://soundmindai.net/images/og-image.png">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
     <link rel="icon" type="image/png" href="images/icon.png">
     <link rel="apple-touch-icon" href="images/icon.png">
 
@@ -55,15 +54,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* CSS Variables - Blue Color Scheme */
+        /* CSS Variables - Based on App Logo Colors */
         :root {
             --primary-blue: #60A5FA;
-            --primary-blue-dark: #3B82F6;
+            --primary-purple: #A78BFA;
             --accent-light: #7DD3FC;
             --bg-dark: #1E293B;
             --bg-darker: #0F172A;
             --gradient-start: #60A5FA;
-            --gradient-end: #3B82F6;
+            --gradient-end: #A78BFA;
             --text-primary: #1E293B;
             --text-secondary: #64748B;
             --text-light: #94A3B8;
@@ -179,22 +178,24 @@
         .nav-logo {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-size: 1.25rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-primary);
             text-decoration: none;
         }
 
-        .nav-logo-icon {
-            flex-shrink: 0;
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
         }
 
-        .nav-logo-text {
-            color: var(--text-primary);
+        .logo-text {
+            color: #1E293B;
         }
 
-        .nav-logo-ai {
+        .logo-accent {
             color: #3B82F6;
         }
 
@@ -241,14 +242,13 @@
 
         .btn-primary {
             background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-            color: white !important;
+            color: white;
             box-shadow: 0 4px 14px rgba(96, 165, 250, 0.4);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(96, 165, 250, 0.5);
-            color: white !important;
         }
 
         .btn-secondary {
@@ -278,6 +278,8 @@
             width: 100px;
             height: 100px;
             margin: 0 auto 32px;
+            border-radius: 22px;
+            box-shadow: var(--shadow-lg);
         }
 
         .hero-title {
@@ -715,22 +717,15 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <svg class="nav-logo-icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="18" cy="18" r="18" fill="#3B82F6"/>
-                    <rect x="10" y="14" width="2" height="8" rx="1" fill="white"/>
-                    <rect x="14" y="11" width="2" height="14" rx="1" fill="white"/>
-                    <rect x="18" y="8" width="2" height="20" rx="1" fill="white"/>
-                    <rect x="22" y="11" width="2" height="14" rx="1" fill="white"/>
-                    <rect x="26" y="14" width="2" height="8" rx="1" fill="white"/>
-                </svg>
-                <span class="nav-logo-text">SoundMind<span class="nav-logo-ai">AI</span></span>
+                <img src="images/icon.png" alt="SoundMindAI">
+                <span class="logo-text">Sound</span><span class="logo-accent">Mind</span><span class="logo-text">AI</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#features">Features</a></li>
                 <li><a href="#byok">BYOK</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="https://soundmindai.lemonsqueezy.com/buy/748424" class="btn btn-primary" style="padding: 10px 20px;">Get It Now</a></li>
+                <li><a href="#download" class="btn btn-primary" style="padding: 10px 20px;">Download</a></li>
             </ul>
         </div>
     </nav>
@@ -738,14 +733,7 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <svg class="hero-logo" width="80" height="80" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="18" cy="18" r="18" fill="#3B82F6"/>
-                <rect x="10" y="14" width="2" height="8" rx="1" fill="white"/>
-                <rect x="14" y="11" width="2" height="14" rx="1" fill="white"/>
-                <rect x="18" y="8" width="2" height="20" rx="1" fill="white"/>
-                <rect x="22" y="11" width="2" height="14" rx="1" fill="white"/>
-                <rect x="26" y="14" width="2" height="8" rx="1" fill="white"/>
-            </svg>
+            <img src="images/icon.png" alt="SoundMindAI" class="hero-logo">
             <h1 class="hero-title">
                 Record. Transcribe.<br><span class="gradient">Summarize with AI.</span>
             </h1>
@@ -753,13 +741,13 @@
                 Capture everything you hear on your Mac, transcribe it with AI, and get intelligent summaries and action items. Use your own API keys. No subscriptions.
             </p>
             <div class="hero-cta">
-                <a href="https://soundmindai.lemonsqueezy.com/buy/748424" class="btn btn-primary btn-large">
+                <a href="#download" class="btn btn-primary btn-large">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                         <polyline points="7 10 12 15 17 10"/>
                         <line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    Get Started - Free Trial
+                    Download Free Trial
                 </a>
                 <a href="#features" class="btn btn-secondary btn-large">Learn More</a>
             </div>
@@ -974,11 +962,8 @@
                         Lifetime updates included
                     </li>
                 </ul>
-                <a href="https://soundmindai.lemonsqueezy.com/buy/748424" class="btn btn-primary btn-large" style="width: 100%;">Start Free Trial</a>
+                <a href="#download" class="btn btn-primary btn-large" style="width: 100%;">Start Free Trial</a>
                 <p class="pricing-trial">7-day free trial. No credit card required.</p>
-                <p style="margin-top: 16px; padding: 12px; background: rgba(251, 191, 36, 0.1); border-radius: 8px; font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5;">
-                    <strong style="color: var(--text-primary);">BYOK Note:</strong> This license covers SoundMindAI software only. AI transcription and summarization use your own API keys — usage charges from providers (OpenAI, Anthropic, Google, etc.) are billed directly by them and are not included in or controlled by this license.
-                </p>
             </div>
         </div>
     </section>
@@ -1019,18 +1004,18 @@
     <!-- CTA -->
     <section id="download" class="section cta">
         <div class="container">
-            <h2 class="section-title">Ready to <span style="color: #60A5FA;">transform</span> how you capture meetings?</h2>
+            <h2 class="section-title">Ready to transform how you capture meetings?</h2>
             <p class="section-subtitle mx-auto">
                 Start your 7-day free trial today. No credit card required.
             </p>
             <div style="margin-top: 32px;">
-                <a href="https://soundmindai.lemonsqueezy.com/buy/748424" class="btn btn-large" style="background: white; color: #1E293B; box-shadow: 0 4px 14px rgba(255, 255, 255, 0.3);">
+                <a href="https://soundmindai.lemonsqueezy.com/checkout/buy/79065d78-f583-448d-8589-4eca797f6af7" class="btn btn-primary btn-large" style="background: white; color: #1E293B;">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                         <polyline points="7 10 12 15 17 10"/>
                         <line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    Get SoundMindAI
+                    Download for macOS
                 </a>
             </div>
             <p class="cta-contact">
