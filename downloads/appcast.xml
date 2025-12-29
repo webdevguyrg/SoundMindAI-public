@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>SoundMindAI Updates</title>
+    <link>https://soundmindai.net/downloads/appcast.xml</link>
+    <description>SoundMindAI update feed</description>
+    <language>en</language>
+
+    <item>
+      <title>Version 1.0.0</title>
+      <pubDate>Sun, 29 Dec 2024 12:00:00 +0000</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>1.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <h2>Initial Release - Version 1.0.0</h2>
+        <p>The first public release of SoundMindAI!</p>
+        <h3>Features</h3>
+        <ul>
+          <li><strong>Recording:</strong> Capture system audio and microphone simultaneously</li>
+          <li><strong>AI Transcription:</strong> OpenAI Whisper, AssemblyAI, or free Apple Speech</li>
+          <li><strong>AI Summarization:</strong> Claude, GPT-4, Gemini, HuggingFace, OpenRouter</li>
+          <li><strong>Organization:</strong> Tags, folders, and powerful search</li>
+          <li><strong>Export:</strong> Multiple formats including TXT, Markdown, HTML, SRT</li>
+          <li><strong>Privacy:</strong> All data stored locally with BYOK model</li>
+        </ul>
+      ]]></description>
+      <enclosure
+        url="https://soundmindai.net/downloads/SoundMindAI-1.0.0.dmg"
+        sparkle:edSignature="REPLACE_WITH_SIGNATURE_FROM_SIGN_UPDATE"
+        length="REPLACE_WITH_DMG_FILE_SIZE"
+        type="application/octet-stream" />
+    </item>
+
+  </channel>
+</rss>
