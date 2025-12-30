@@ -1100,14 +1100,22 @@
         const faqNav = document.getElementById('faq-nav');
         const categories = document.querySelectorAll('.faq-category');
 
-        // Get category title for each FAQ item
-        function getCategoryTitle(faqItem) {
-            const category = faqItem.closest('.faq-category');
-            if (category) {
-                const titleEl = category.querySelector('.faq-category__title');
-                return titleEl ? titleEl.textContent.trim() : '';
-            }
-            return '';
+        // Store original HTML for restoration
+        const originalContent = new Map();
+        categories.forEach(category => {
+            const items = category.querySelectorAll('.faq-item');
+            items.forEach(item => {
+                const content = item.querySelector('.faq-item__content');
+                const summary = item.querySelector('summary');
+                if (content) originalContent.set(item, { content: content.innerHTML, summary: summary.childNodes[0].textContent });
+            });
+        });
+
+        // Highlight text matches
+        function highlightText(text, searchTerm) {
+            if (!searchTerm) return text;
+            const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<span class="faq-search-highlight">$1</span>');
         }
 
         // Perform search
@@ -1135,7 +1143,9 @@
                 items.forEach(item => {
                     const summary = item.querySelector('summary');
                     const content = item.querySelector('.faq-item__content');
-                    const summaryText = summary ? summary.textContent.toLowerCase() : '';
+                    const orig = originalContent.get(item);
+
+                    const summaryText = orig ? orig.summary.toLowerCase() : '';
                     const contentText = content ? content.textContent.toLowerCase() : '';
 
                     // Check if search term is in title or content
@@ -1145,21 +1155,30 @@
                         categoryHasMatch = true;
                         matchCount++;
 
-                        // Add category tag if not already present
-                        let tag = summary.querySelector('.faq-item__category-tag');
-                        if (!tag) {
-                            tag = document.createElement('span');
-                            tag.className = 'faq-item__category-tag';
-                            summary.appendChild(tag);
+                        // Highlight matches in content
+                        if (orig && content) {
+                            content.innerHTML = highlightText(orig.content, searchTerm);
                         }
-                        tag.textContent = getCategoryTitle(item).replace(/^[\u{1F300}-\u{1F9FF}]/u, '').trim();
+
+                        // Highlight in summary title
+                        if (orig && summary.childNodes[0]) {
+                            summary.childNodes[0].textContent = ''; // Clear original
+                            const titleSpan = document.createElement('span');
+                            titleSpan.innerHTML = highlightText(orig.summary, searchTerm);
+                            summary.insertBefore(titleSpan, summary.firstChild);
+                        }
+
+                        // Auto-expand matched items
+                        item.setAttribute('open', '');
                     } else {
                         item.classList.add('faq-item--hidden');
                         item.classList.remove('faq-item--match');
+                        item.removeAttribute('open');
 
-                        // Remove category tag
-                        const tag = summary.querySelector('.faq-item__category-tag');
-                        if (tag) tag.remove();
+                        // Restore original content
+                        if (orig && content) {
+                            content.innerHTML = orig.content;
+                        }
                     }
                 });
 
@@ -1173,6 +1192,7 @@
 
             // Show results count
             resultsText.style.display = 'block';
+            resultsText.classList.toggle('faq-search__results--no-results', matchCount === 0);
             if (matchCount === 0) {
                 resultsText.textContent = 'No results found. Try a different search term.';
             } else {
@@ -1185,6 +1205,7 @@
             searchInput.value = '';
             clearButton.style.display = 'none';
             resultsText.style.display = 'none';
+            resultsText.classList.remove('faq-search__results--no-results');
             faqNav.style.display = 'flex';
 
             categories.forEach(category => {
@@ -1192,16 +1213,30 @@
                 const items = category.querySelectorAll('.faq-item');
                 items.forEach(item => {
                     item.classList.remove('faq-item--hidden', 'faq-item--match');
+                    item.removeAttribute('open');
+
+                    // Restore original content
+                    const orig = originalContent.get(item);
+                    const content = item.querySelector('.faq-item__content');
                     const summary = item.querySelector('summary');
-                    const tag = summary.querySelector('.faq-item__category-tag');
-                    if (tag) tag.remove();
+                    if (orig && content) {
+                        content.innerHTML = orig.content;
+                    }
+                    // Remove any highlighted title spans
+                    const titleSpan = summary.querySelector('span');
+                    if (titleSpan && titleSpan.classList.length === 0) {
+                        summary.childNodes[0].textContent = orig.summary;
+                        titleSpan.remove();
+                    }
                 });
             });
         }
 
-        // Event listeners
+        // Debounce for better performance
+        let debounceTimer;
         searchInput.addEventListener('input', function(e) {
-            performSearch(e.target.value);
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => performSearch(e.target.value), 150);
         });
 
         clearButton.addEventListener('click', function() {
