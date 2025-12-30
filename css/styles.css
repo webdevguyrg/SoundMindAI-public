@@ -399,6 +399,14 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--color-bg-secondary);
     border-radius: var(--border-radius);
     font-size: var(--font-size-small);
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+a.provider:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
 }
 
 .provider__icon {
