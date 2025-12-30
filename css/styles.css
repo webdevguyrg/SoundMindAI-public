@@ -714,8 +714,8 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     list-style: none;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: var(--space-md);
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -728,6 +728,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     color: var(--color-text-secondary);
     transition: transform var(--transition-fast);
+    margin-left: auto;
 }
 
 .faq-item[open] summary::after {
