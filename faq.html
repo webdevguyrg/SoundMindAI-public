@@ -354,13 +354,72 @@
                 <details class="faq-item">
                     <summary>Can I edit transcripts?</summary>
                     <div class="faq-item__content">
-                        <p>Yes! You can edit transcripts to fix errors:</p>
+                        <p>Yes! SoundMindAI provides comprehensive transcript editing:</p>
                         <ul>
-                            <li>Click on the transcript text to enter edit mode</li>
-                            <li>Make corrections directly in the text</li>
-                            <li>Changes are saved automatically</li>
-                            <li>Original timestamps are preserved</li>
+                            <li><strong>Edit text:</strong> Click on any transcript segment to edit the text directly</li>
+                            <li><strong>Split segments:</strong> Break a long segment into two separate parts at a specific point</li>
+                            <li><strong>Merge segments:</strong> Combine adjacent segments into one</li>
+                            <li><strong>Manage speakers:</strong> Assign or change the speaker for any segment</li>
+                            <li><strong>Auto-save:</strong> All changes are saved automatically</li>
                         </ul>
+                        <p>Original timestamps are preserved when editing text, and adjusted appropriately when splitting segments.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I manage speakers in transcripts?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI makes it easy to identify and organize speakers:</p>
+                        <p><strong>Changing a speaker:</strong></p>
+                        <ul>
+                            <li>Click on the speaker label next to any transcript segment</li>
+                            <li>Select from existing speakers or create a new one</li>
+                            <li>The change applies to that segment only</li>
+                        </ul>
+                        <p><strong>Renaming speakers:</strong></p>
+                        <ul>
+                            <li>Click on a speaker name to edit it</li>
+                            <li>Type the new name (e.g., change "Speaker 1" to "John")</li>
+                            <li>The name updates everywhere that speaker appears</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Use AssemblyAI for automatic speaker diarization - it will automatically identify and label different speakers in your recording.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is speaker diarization?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Speaker diarization</strong> automatically identifies and labels different speakers in a recording (e.g., "Speaker 1", "Speaker 2").</p>
+                        <p><strong>How to enable it:</strong></p>
+                        <ol>
+                            <li>Set up an AssemblyAI API key in Settings</li>
+                            <li>Select AssemblyAI as your transcription provider</li>
+                            <li>Transcribe your recording - speakers are automatically detected</li>
+                            <li>Rename generic labels (Speaker 1, Speaker 2) to actual names</li>
+                        </ol>
+                        <p><strong>Note:</strong> Speaker diarization is only available with AssemblyAI. Apple Speech and OpenAI Whisper do not support automatic speaker identification.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I bookmark important parts of a transcript?</summary>
+                    <div class="faq-item__content">
+                        <p>Bookmarks let you mark and quickly find important moments in your transcripts:</p>
+                        <p><strong>Adding bookmarks:</strong></p>
+                        <ul>
+                            <li>Click the bookmark icon next to any transcript segment</li>
+                            <li>The icon fills in to indicate it's bookmarked</li>
+                            <li>Click again to remove the bookmark</li>
+                        </ul>
+                        <p><strong>Filtering by bookmarks:</strong></p>
+                        <ul>
+                            <li>Click the bookmark filter button in the transcript toolbar</li>
+                            <li>Only bookmarked segments will be shown</li>
+                            <li>Click again to show all segments</li>
+                        </ul>
+                        <p>Bookmarks are saved with your recording and persist across sessions.</p>
                     </div>
                 </details>
             </section>
@@ -427,6 +486,30 @@
                         <p><strong>Important:</strong> SoundMindAI is not responsible for the accuracy of AI-generated transcripts or summaries. We simply pass your content to your chosen AI provider and display their output. Always review AI-generated content for accuracy, especially for important meetings or sensitive information.</p>
                         <div class="tip-box">
                             <strong>Tip:</strong> You can edit transcripts directly in the app to correct any errors. Try different AI providers to find the best results for your content type.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is AI Chat and how do I use it?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>AI Chat</strong> lets you ask questions about your recordings and get instant answers based on the transcript content.</p>
+                        <p><strong>How to use AI Chat:</strong></p>
+                        <ol>
+                            <li>Open a recording that has been transcribed</li>
+                            <li>Click the "Chat" tab in the detail view</li>
+                            <li>Type your question (e.g., "What were the main decisions made?")</li>
+                            <li>The AI will analyze the transcript and provide an answer</li>
+                        </ol>
+                        <p><strong>Example questions:</strong></p>
+                        <ul>
+                            <li>"What action items were discussed?"</li>
+                            <li>"Summarize what John said about the budget"</li>
+                            <li>"What were the concerns raised about the timeline?"</li>
+                            <li>"List all the names mentioned in this meeting"</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> AI Chat uses your configured AI provider (OpenAI, Anthropic, etc.). Make sure you have an AI provider set up in Settings.
                         </div>
                     </div>
                 </details>
@@ -663,16 +746,43 @@
                 </details>
 
                 <details class="faq-item">
+                    <summary>Can I select multiple recordings at once?</summary>
+                    <div class="faq-item__content">
+                        <p>Yes! SoundMindAI supports multi-select for batch operations:</p>
+                        <p><strong>How to multi-select:</strong></p>
+                        <ul>
+                            <li><strong>Command + Click:</strong> Add individual recordings to your selection</li>
+                            <li><strong>Shift + Click:</strong> Select a range of recordings</li>
+                            <li><strong>Command + A:</strong> Select all recordings</li>
+                        </ul>
+                        <p><strong>Batch operations available:</strong></p>
+                        <ul>
+                            <li>Delete multiple recordings at once</li>
+                            <li>Add tags to multiple recordings</li>
+                            <li>Export multiple recordings</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item">
                     <summary>Can I export my recordings and transcripts?</summary>
                     <div class="faq-item__content">
-                        <p>Yes! Export options include:</p>
+                        <p>Yes! SoundMindAI offers flexible export options:</p>
+                        <p><strong>Export formats:</strong></p>
                         <ul>
-                            <li><strong>Audio:</strong> Export original audio file (M4A)</li>
-                            <li><strong>Transcript:</strong> Export as plain text, markdown, or SRT subtitles</li>
-                            <li><strong>Summary:</strong> Export summary, key points, and action items</li>
-                            <li><strong>Combined:</strong> Export everything in one package</li>
+                            <li><strong>Plain Text (.txt):</strong> Simple text format for any application</li>
+                            <li><strong>Markdown (.md):</strong> Formatted text with headers and styling</li>
+                            <li><strong>HTML (.html):</strong> Web-ready format with styling</li>
+                            <li><strong>JSON (.json):</strong> Structured data format for developers</li>
+                            <li><strong>SRT (.srt):</strong> Subtitle format for video editing</li>
                         </ul>
-                        <p>Use File > Export or right-click on a recording to access export options.</p>
+                        <p><strong>What you can export:</strong></p>
+                        <ul>
+                            <li>Full transcript with timestamps and speakers</li>
+                            <li>AI-generated summary, key points, and action items</li>
+                            <li>Original audio file (M4A)</li>
+                        </ul>
+                        <p>Access export via File > Export, the toolbar button, or right-click on a recording.</p>
                     </div>
                 </details>
 
@@ -775,6 +885,36 @@
                             <li><strong>Rate limited:</strong> Wait a moment and try again</li>
                         </ul>
                         <p>You can test your API keys in Settings by clicking the "Test" button next to each key.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How do I use API Diagnostics?</summary>
+                    <div class="faq-item__content">
+                        <p>The <strong>Diagnose</strong> feature helps you test and troubleshoot your API configurations:</p>
+                        <p><strong>How to access:</strong></p>
+                        <ol>
+                            <li>Click "Diagnose" in the sidebar</li>
+                            <li>Select the provider you want to test (Transcription or AI)</li>
+                            <li>Click "Run Test" to verify the connection</li>
+                        </ol>
+                        <p><strong>What diagnostics check:</strong></p>
+                        <ul>
+                            <li>API key validity</li>
+                            <li>Network connectivity to the provider</li>
+                            <li>Account status and available credits</li>
+                            <li>Model availability</li>
+                        </ul>
+                        <p><strong>When to use diagnostics:</strong></p>
+                        <ul>
+                            <li>After entering a new API key</li>
+                            <li>When transcription or summarization fails</li>
+                            <li>To verify your setup before an important recording</li>
+                            <li>After changing providers or models</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Run diagnostics after setting up each API key to ensure everything is working before you need it.
+                        </div>
                     </div>
                 </details>
 
