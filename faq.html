@@ -301,6 +301,43 @@
                 </details>
 
                 <details class="faq-item">
+                    <summary>What are the limitations of Apple Speech (native) transcription?</summary>
+                    <div class="faq-item__content">
+                        <p>Apple's built-in Speech Recognition has the following limitations:</p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--color-border);">
+                                    <th style="text-align: left; padding: 0.5rem;">Mode</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Duration Limit</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.5rem;"><strong>Server-based</strong></td>
+                                    <td style="padding: 0.5rem;">1 minute</td>
+                                    <td style="padding: 0.5rem;">Hard limit, recognition stops after 60 seconds</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.5rem;"><strong>On-device</strong></td>
+                                    <td style="padding: 0.5rem;">~5 minutes recommended</td>
+                                    <td style="padding: 0.5rem;">No hard limit, but becomes unreliable for longer recordings</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem;"><strong>Request limit</strong></td>
+                                    <td style="padding: 0.5rem;">1000/hour per device</td>
+                                    <td style="padding: 0.5rem;">Shared across all apps on the device</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>SoundMindAI enforces a 5-minute limit</strong> for native transcription to ensure reliability. For longer recordings, use OpenAI Whisper or AssemblyAI.</p>
+                        <div class="warning-box">
+                            <strong>Important:</strong> If you have recordings longer than 5 minutes, configure a cloud transcription provider (Whisper or AssemblyAI) in Settings. These services have no practical duration limits and offer higher accuracy.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
                     <summary>How do I transcribe a recording?</summary>
                     <div class="faq-item__content">
                         <p>After recording or importing audio:</p>
@@ -715,12 +752,15 @@
                     <div class="faq-item__content">
                         <p>If transcription isn't working:</p>
                         <ul>
+                            <li><strong>Recording too long (Apple Speech):</strong> Native transcription is limited to 5 minutes. For longer recordings, configure Whisper or AssemblyAI in Settings.</li>
                             <li><strong>Apple Speech:</strong> Ensure your Mac has an internet connection (required for some languages)</li>
                             <li><strong>BYOK services:</strong> Verify your API key is correct in Settings</li>
                             <li><strong>Check credits:</strong> Ensure you have available credits/balance with your AI provider</li>
                             <li><strong>File format:</strong> Ensure the audio file is in a supported format</li>
-                            <li><strong>File size:</strong> Very long recordings may need to be split</li>
                         </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> If transcription gets stuck, you can cancel it using the X button next to the progress bar, then restart with a different provider.
+                        </div>
                     </div>
                 </details>
 
