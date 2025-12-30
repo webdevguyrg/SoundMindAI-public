@@ -1188,9 +1188,9 @@
                             content.innerHTML = highlightInHTML(orig.contentHTML, searchTerm);
                         }
 
-                        // Highlight in summary title - replace entire summary content
+                        // Highlight in summary title - wrap in span to keep as single flex item
                         if (orig) {
-                            summary.innerHTML = highlightText(orig.title, searchTerm);
+                            summary.innerHTML = '<span>' + highlightText(orig.title, searchTerm) + '</span>';
                         }
 
                         // Auto-expand matched items
