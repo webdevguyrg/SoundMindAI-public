@@ -1101,21 +1101,43 @@
         const categories = document.querySelectorAll('.faq-category');
 
         // Store original HTML for restoration
-        const originalContent = new Map();
+        const originalData = new Map();
         categories.forEach(category => {
             const items = category.querySelectorAll('.faq-item');
             items.forEach(item => {
                 const content = item.querySelector('.faq-item__content');
                 const summary = item.querySelector('summary');
-                if (content) originalContent.set(item, { content: content.innerHTML, summary: summary.childNodes[0].textContent });
+                // Store as object with both title text and content HTML
+                originalData.set(item, {
+                    title: summary.textContent.trim(),
+                    contentHTML: content ? content.innerHTML : ''
+                });
             });
         });
 
-        // Highlight text matches
+        // Escape HTML for safe insertion
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Highlight text matches (returns HTML)
         function highlightText(text, searchTerm) {
-            if (!searchTerm) return text;
+            if (!searchTerm) return escapeHtml(text);
+            const escaped = escapeHtml(text);
             const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
-            return text.replace(regex, '<span class="faq-search-highlight">$1</span>');
+            return escaped.replace(regex, '<span class="faq-search-highlight">$1</span>');
+        }
+
+        // Highlight in HTML content (preserving tags)
+        function highlightInHTML(html, searchTerm) {
+            if (!searchTerm) return html;
+            // Only highlight text, not inside tags
+            const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return html.replace(/>([^<]+)</g, (match, text) => {
+                return '>' + text.replace(regex, '<span class="faq-search-highlight">$1</span>') + '<';
+            });
         }
 
         // Perform search
@@ -1143,13 +1165,13 @@
                 items.forEach(item => {
                     const summary = item.querySelector('summary');
                     const content = item.querySelector('.faq-item__content');
-                    const orig = originalContent.get(item);
+                    const orig = originalData.get(item);
 
-                    const summaryText = orig ? orig.summary.toLowerCase() : '';
+                    const titleText = orig ? orig.title.toLowerCase() : '';
                     const contentText = content ? content.textContent.toLowerCase() : '';
 
                     // Check if search term is in title or content
-                    if (summaryText.includes(searchTerm) || contentText.includes(searchTerm)) {
+                    if (titleText.includes(searchTerm) || contentText.includes(searchTerm)) {
                         item.classList.remove('faq-item--hidden');
                         item.classList.add('faq-item--match');
                         categoryHasMatch = true;
@@ -1157,15 +1179,12 @@
 
                         // Highlight matches in content
                         if (orig && content) {
-                            content.innerHTML = highlightText(orig.content, searchTerm);
+                            content.innerHTML = highlightInHTML(orig.contentHTML, searchTerm);
                         }
 
-                        // Highlight in summary title
-                        if (orig && summary.childNodes[0]) {
-                            summary.childNodes[0].textContent = ''; // Clear original
-                            const titleSpan = document.createElement('span');
-                            titleSpan.innerHTML = highlightText(orig.summary, searchTerm);
-                            summary.insertBefore(titleSpan, summary.firstChild);
+                        // Highlight in summary title - replace entire summary content
+                        if (orig) {
+                            summary.innerHTML = highlightText(orig.title, searchTerm);
                         }
 
                         // Auto-expand matched items
@@ -1174,11 +1193,6 @@
                         item.classList.add('faq-item--hidden');
                         item.classList.remove('faq-item--match');
                         item.removeAttribute('open');
-
-                        // Restore original content
-                        if (orig && content) {
-                            content.innerHTML = orig.content;
-                        }
                     }
                 });
 
@@ -1216,17 +1230,12 @@
                     item.removeAttribute('open');
 
                     // Restore original content
-                    const orig = originalContent.get(item);
+                    const orig = originalData.get(item);
                     const content = item.querySelector('.faq-item__content');
                     const summary = item.querySelector('summary');
-                    if (orig && content) {
-                        content.innerHTML = orig.content;
-                    }
-                    // Remove any highlighted title spans
-                    const titleSpan = summary.querySelector('span');
-                    if (titleSpan && titleSpan.classList.length === 0) {
-                        summary.childNodes[0].textContent = orig.summary;
-                        titleSpan.remove();
+                    if (orig) {
+                        if (content) content.innerHTML = orig.contentHTML;
+                        summary.textContent = orig.title;
                     }
                 });
             });
