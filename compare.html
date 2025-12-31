@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundMindAI vs Fireflies vs Otter - Comparison | Own Your Meeting Assistant</title>
+    <meta name="description" content="Compare SoundMindAI to Fireflies and Otter. $49.95 once vs $500+ every year. 100% private, local storage. No subscriptions. See why professionals choose SoundMindAI.">
+    <meta name="keywords" content="SoundMindAI vs Fireflies, SoundMindAI vs Otter, Fireflies alternative, Otter alternative, meeting transcription comparison, private meeting recorder, BYOK transcription">
+    <meta name="author" content="GrowTech Development, LLC">
+    <link rel="canonical" href="https://soundmindai.net/compare">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soundmindai.net/compare">
+    <meta property="og:title" content="SoundMindAI vs Fireflies vs Otter - Why Professionals Choose SoundMindAI">
+    <meta property="og:description" content="$49.95 once vs $500+ every year. 100% private. No subscriptions. Compare and see the difference.">
+    <meta property="og:image" content="https://soundmindai.net/images/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SoundMindAI vs Fireflies vs Otter - Comparison">
+    <meta name="twitter:description" content="Own your meeting assistant. $49.95 once vs $500+ every year.">
+    <meta name="twitter:image" content="https://soundmindai.net/images/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/nav-icon.svg">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- Structured Data for Comparison -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "SoundMindAI vs Fireflies vs Otter Comparison",
+      "description": "Detailed comparison of SoundMindAI, Fireflies, and Otter meeting transcription tools",
+      "url": "https://soundmindai.net/compare",
+      "mainEntity": {
+        "@type": "SoftwareApplication",
+        "name": "SoundMindAI",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "macOS",
+        "offers": {
+          "@type": "Offer",
+          "price": "49.95",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2026-12-31"
+        }
+      }
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <style>
+        /* Import home page variables */
+        :root {
+            --primary-blue: #60A5FA;
+            --primary-blue-dark: #3B82F6;
+            --accent-light: #7DD3FC;
+            --bg-dark: #1E293B;
+            --bg-darker: #0F172A;
+            --gradient-start: #60A5FA;
+            --gradient-end: #3B82F6;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --text-light: #94A3B8;
+            --bg-white: #FFFFFF;
+            --bg-light: #F8FAFC;
+            --bg-section: #F1F5F9;
+            --border: #E2E8F0;
+            --success: #34D399;
+        }
+
+        /* Comparison Page Specific Styles */
+        .compare-hero {
+            background: linear-gradient(135deg, #f5f5f7 0%, #fbfbfd 100%);
+            padding: 160px 0 100px;
+            text-align: center;
+        }
+
+        .compare-hero__title {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .compare-hero__subtitle {
+            font-size: clamp(1.125rem, 2vw, 1.5rem);
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 48px;
+            line-height: 1.5;
+        }
+
+        .compare-hero__cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .trust-badges {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 32px;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .trust-badge svg {
+            color: var(--success);
+        }
+
+        /* Section styling - reduced spacing */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section--alt {
+            background: var(--bg-section);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+            text-align: center;
+            margin: 0 auto 29px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .logo-text {
+            color: #1E293B;
+        }
+
+        .logo-accent {
+            color: #3B82F6;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a.btn-primary {
+            color: white;
+        }
+
+        .nav-links a.btn-primary:hover {
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Cost Comparison Table */
+        .cost-table-wrapper {
+            overflow-x: auto;
+            margin: 48px 0;
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+        }
+
+        .cost-table thead {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+            color: white;
+        }
+
+        .cost-table th {
+            padding: 24px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.0625rem;
+        }
+
+        .cost-table th:first-child {
+            width: 30%;
+        }
+
+        .cost-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        .cost-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .cost-table tbody tr:hover {
+            background: #F8FAFC;
+        }
+
+        .cost-table--winner {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(52, 199, 89, 0.05));
+            font-weight: 600;
+        }
+
+        .cost-highlight {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #34D399;
+        }
+
+        .cost-competitor {
+            color: #64748B;
+        }
+
+        .savings-badge {
+            display: inline-block;
+            background: #34D399;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 980px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* Feature Comparison Table */
+        .feature-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            margin: 48px 0;
+        }
+
+        .feature-table thead {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+            color: white;
+        }
+
+        .feature-table th {
+            padding: 24px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.0625rem;
+        }
+
+        .feature-table th:first-child {
+            text-align: left;
+            width: 40%;
+        }
+
+        .feature-table td {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E2E8F0;
+            text-align: center;
+        }
+
+        .feature-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        .feature-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .feature-table tbody tr:hover {
+            background: #F8FAFC;
+        }
+
+        .feature-check {
+            color: #34D399;
+            font-size: 1.5rem;
+        }
+
+        .feature-cross {
+            color: #64748B;
+            font-size: 1.5rem;
+        }
+
+        .feature-highlight {
+            background: linear-gradient(135deg, rgba(52, 199, 89, 0.1), rgba(52, 199, 89, 0.05));
+        }
+
+        /* CTA Section */
+        .compare-cta {
+            background: linear-gradient(135deg, #1d1d1f 0%, #2d2d2f 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .compare-cta h2 {
+            color: white;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .compare-cta p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.25rem;
+            margin-bottom: 48px;
+        }
+
+        /* Buttons - match home page */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 980px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #60A5FA, #3B82F6);
+            color: white;
+            box-shadow: 0 4px 14px rgba(96, 165, 250, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(96, 165, 250, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #60A5FA;
+            border: 2px solid #60A5FA;
+        }
+
+        .btn-secondary:hover {
+            background: #60A5FA;
+            color: white;
+        }
+
+        .btn-large {
+            padding: 18px 36px;
+            font-size: 1.125rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .compare-hero {
+                padding: 120px 0 64px;
+            }
+
+            .section {
+                padding: 64px 0;
+            }
+
+            .cost-table th,
+            .cost-table td {
+                padding: 12px;
+                font-size: 0.875rem;
+            }
+
+            .feature-table th,
+            .feature-table td {
+                padding: 12px;
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/nav-icon.svg" alt="SoundMindAI">
+                <span class="logo-name"><span class="logo-text">Sound</span><span class="logo-accent">Mind</span><span class="logo-text">AI</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#byok">BYOK</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="compare.html">Compare</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html#download" class="btn btn-primary" style="padding: 10px 20px;">Download</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="compare-hero">
+        <div class="container">
+            <h1 class="compare-hero__title">Stop Paying <span style="color: #3B82F6;">Forever</span>.<br><span style="color: #3B82F6;">Own</span> Your Meeting Assistant.</h1>
+            <p class="compare-hero__subtitle">SoundMindAI gives you lifetime access for $49.95 — while Fireflies and Otter charge you $500-$1,200 every 5 years. Your data stays private. Your costs stay low. Your meetings stay yours.</p>
+
+            <div class="compare-hero__cta">
+                <a href="downloads/SoundMindAI-1.0.0.dmg" class="btn btn-primary btn-large">Get Lifetime Access - $49.95</a>
+                <a href="#comparison" class="btn btn-secondary btn-large">See Full Comparison</a>
+            </div>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>One-time payment</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>100% local storage</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Private & secure</span>
+                </div>
+                <div class="trust-badge">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>No subscriptions. Ever.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Year Cost Comparison -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">The Real Cost: 5-Year Comparison</h2>
+            <p class="section-subtitle">See how much you'll actually spend over 5 years</p>
+
+            <div class="cost-table-wrapper">
+                <table class="cost-table">
+                    <thead>
+                        <tr>
+                            <th>Provider</th>
+                            <th>Year 1</th>
+                            <th>Year 2</th>
+                            <th>Year 3</th>
+                            <th>Year 4</th>
+                            <th>Year 5</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="cost-table--winner">
+                            <td><strong><span style="color: #1E293B;">Sound</span><span style="color: #3B82F6;">Mind</span><span style="color: #1E293B;">AI</span></strong></td>
+                            <td class="cost-highlight">$49.95</td>
+                            <td class="cost-highlight">$0</td>
+                            <td class="cost-highlight">$0</td>
+                            <td class="cost-highlight">$0</td>
+                            <td class="cost-highlight">$0</td>
+                            <td class="cost-highlight">$49.95 <span class="savings-badge">WINNER</span></td>
+                        </tr>
+                        <tr>
+                            <td>Otter.ai Pro</td>
+                            <td class="cost-competitor">$100</td>
+                            <td class="cost-competitor">$100</td>
+                            <td class="cost-competitor">$100</td>
+                            <td class="cost-competitor">$100</td>
+                            <td class="cost-competitor">$100</td>
+                            <td class="cost-competitor"><strong>$500</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Otter.ai Business</td>
+                            <td class="cost-competitor">$240</td>
+                            <td class="cost-competitor">$240</td>
+                            <td class="cost-competitor">$240</td>
+                            <td class="cost-competitor">$240</td>
+                            <td class="cost-competitor">$240</td>
+                            <td class="cost-competitor"><strong>$1,200</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Fireflies Pro</td>
+                            <td class="cost-competitor">$120</td>
+                            <td class="cost-competitor">$120</td>
+                            <td class="cost-competitor">$120</td>
+                            <td class="cost-competitor">$120</td>
+                            <td class="cost-competitor">$120</td>
+                            <td class="cost-competitor"><strong>$600</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Fireflies Business</td>
+                            <td class="cost-competitor">$228</td>
+                            <td class="cost-competitor">$228</td>
+                            <td class="cost-competitor">$228</td>
+                            <td class="cost-competitor">$228</td>
+                            <td class="cost-competitor">$228</td>
+                            <td class="cost-competitor"><strong>$1,140</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="text-align: center; font-size: 1.25rem; color: var(--success); font-weight: 600; margin-top: 32px;">
+                💰 You save $450 - $1,150 over 5 years with SoundMindAI
+            </p>
+            <p style="text-align: center; color: var(--text-secondary); margin-top: 8px;">
+                Plus, you control your own AI costs with BYOK (Bring Your Own Key)
+            </p>
+        </div>
+    </section>
+
+    <!-- The 5 Core Wins -->
+    <section class="section section--alt" id="comparison">
+        <div class="container">
+            <h2 class="section-title">The 5 Reasons Sound<span style="color: #3B82F6;">Mind</span>AI Wins</h2>
+            <p class="section-subtitle">Where it actually matters for professionals</p>
+
+            <div style="overflow-x: auto; margin-top: 29px;">
+                <table class="feature-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">What Matters</th>
+                            <th>SoundMindAI</th>
+                            <th>Fireflies & Otter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="feature-highlight">
+                            <td><strong>🔐 Data Privacy</strong></td>
+                            <td>
+                                <strong style="color: var(--success);">100% Local Storage</strong><br>
+                                <span style="font-size: 0.9rem; color: #475569;">All recordings stay on YOUR Mac. Never uploaded to any cloud.</span>
+                            </td>
+                            <td>
+                                <span style="color: #334155;">Cloud Storage Required</span><br>
+                                <span style="font-size: 0.9rem; color: #475569;">All data stored on their servers. Privacy requires expensive Enterprise plans.</span>
+                            </td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>💰 Pricing Model</strong></td>
+                            <td>
+                                <strong style="color: var(--success);">$49.95 Once, Lifetime</strong><br>
+                                <span style="font-size: 0.9rem; color: #475569;">No subscriptions. No monthly fees. Own it forever.</span>
+                            </td>
+                            <td>
+                                <span style="color: #334155;">$100-$240/year Forever</span><br>
+                                <span style="font-size: 0.9rem; color: #475569;">$500-$1,200 over 5 years. Price increases at their discretion.</span>
+                            </td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>🔑 AI Provider</strong></td>
+                            <td>
+                                <strong style="color: var(--success);">Your Choice (BYOK)</strong><br>
+                                <span style="font-size: 0.9rem; color: #475569;">Use OpenAI, Claude, Gemini, etc. Switch anytime. Latest models immediately.</span>
+                            </td>
+                            <td>
+                                <span style="color: #334155;">Locked to Their AI</span><br>
+                                <span style="font-size: 0.9rem; color: #475569;">Can't switch providers. Often outdated models. Pay monthly regardless.</span>
+                            </td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>💾 Storage & Limits</strong></td>
+                            <td>
+                                <strong style="color: var(--success);">Unlimited Everything</strong><br>
+                                <span style="font-size: 0.9rem; color: #475569;">No recording limits. No storage caps. Your Mac's disk space.</span>
+                            </td>
+                            <td>
+                                <span style="color: #334155;">1,200 min/month Limit</span><br>
+                                <span style="font-size: 0.9rem; color: #475569;">8,000 min storage cap. Must upgrade to Business for more.</span>
+                            </td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>🍎 Platform</strong></td>
+                            <td>
+                                <strong style="color: var(--success);">Native macOS App</strong><br>
+                                <span style="font-size: 0.9rem; color: #475569;">Fast, offline-capable, built for Mac. No browser required.</span>
+                            </td>
+                            <td>
+                                <span style="color: #334155;">Web-Based</span><br>
+                                <span style="font-size: 0.9rem; color: #475569;">Slower, internet required. Desktop apps are Electron wrappers.</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+        </div>
+    </section>
+
+
+
+    <!-- Feature Comparison Table -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Feature-by-Feature Comparison</h2>
+            <p class="section-subtitle">See exactly how we stack up</p>
+
+            <div style="overflow-x: auto;">
+                <table class="feature-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SoundMindAI</th>
+                            <th>Fireflies.ai</th>
+                            <th>Otter.ai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="feature-highlight">
+                            <td><strong>💰 Pricing Model</strong></td>
+                            <td><strong style="color: var(--success);">One-time $49.95</strong></td>
+                            <td>$120-$228/year</td>
+                            <td>$100-$240/year</td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>🔐 Data Privacy</strong></td>
+                            <td><strong style="color: var(--success);">100% Local - Never Uploaded</strong></td>
+                            <td>Cloud Storage</td>
+                            <td>Cloud Storage</td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>🔑 AI Provider</strong></td>
+                            <td><strong style="color: var(--success);">Your Choice (BYOK)</strong></td>
+                            <td>Locked to Fireflies AI</td>
+                            <td>Locked to Otter AI</td>
+                        </tr>
+                        <tr class="feature-highlight">
+                            <td><strong>💾 Storage Limit</strong></td>
+                            <td><strong style="color: var(--success);">Unlimited (Your Mac)</strong></td>
+                            <td>8,000 min (Pro)</td>
+                            <td>1,200 min/month (Pro)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>⏱️ Monthly Recording Limits</strong></td>
+                            <td><span class="feature-check">✓</span> None</td>
+                            <td>1,200 min/month (Pro)</td>
+                            <td>1,200 min/month (Pro)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>📱 Platform</strong></td>
+                            <td>🍎 Native macOS</td>
+                            <td>Web + Apps</td>
+                            <td>Web + Apps</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🎙️ System Audio Recording</strong></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>🎤 Microphone Recording</strong></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td><span class="feature-check">✓</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>📝 Transcription</strong></td>
+                            <td><span class="feature-check">✓</span> Native + API (BYOK)</td>
+                            <td><span class="feature-check">✓</span> Proprietary</td>
+                            <td><span class="feature-check">✓</span> Proprietary</td>
+                        </tr>
+                        <tr>
+                            <td><strong>🤖 AI Summaries</strong></td>
+                            <td><span class="feature-check">✓</span> Any Provider</td>
+                            <td><span class="feature-check">✓</span> Fireflies only</td>
+                            <td><span class="feature-check">✓</span> Otter only</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features Section -->
+    <section class="section section--alt">
+        <div class="container">
+            <h2 class="section-title">Advanced Features <span style="color: #1E293B;">Sound</span><span style="color: #3B82F6;">Mind</span><span style="color: #1E293B;">AI</span> Has (That They Don't)</h2>
+            <p class="section-subtitle">Professional-grade transcript editing and organization</p>
+
+            <div style="overflow-x: auto; margin-top: 29px;">
+                <table class="feature-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>SoundMindAI</th>
+                            <th>Fireflies.ai</th>
+                            <th>Otter.ai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Split/Merge Segments</strong></td>
+                            <td>
+                                <span class="feature-check">✓</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Full transcript editing control</span>
+                            </td>
+                            <td><span class="feature-cross">✗</span></td>
+                            <td><span class="feature-cross">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Filter by Speaker</strong></td>
+                            <td>
+                                <span class="feature-check">✓</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Dropdown filter with color-coded speakers</span>
+                            </td>
+                            <td>
+                                <span style="color: #F59E0B;">⚠</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Search only</span>
+                            </td>
+                            <td><span class="feature-cross">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Recording Tags</strong></td>
+                            <td>
+                                <span class="feature-check">✓</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Color-coded with customizable colors</span>
+                            </td>
+                            <td>
+                                <span style="color: #F59E0B;">⚠</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Bookmarks only</span>
+                            </td>
+                            <td>
+                                <span style="color: #F59E0B;">⚠</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Folders only</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Filter by Tags</strong></td>
+                            <td>
+                                <span class="feature-check">✓</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Multi-tag filtering in library</span>
+                            </td>
+                            <td><span class="feature-cross">✗</span></td>
+                            <td><span class="feature-cross">✗</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Bookmarks in Transcript</strong></td>
+                            <td>
+                                <span class="feature-check">✓</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Mark segments + filter to bookmarked only</span>
+                            </td>
+                            <td><span class="feature-check">✓</span></td>
+                            <td>
+                                <span style="color: #F59E0B;">⚠</span>
+                                <span style="font-size: 0.9rem; color: #475569; display: block; margin-top: 4px;">Highlights only</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p style="text-align: center; font-size: 1.125rem; color: #64748B; margin-top: 48px; max-width: 700px; margin-left: auto; margin-right: auto;">
+                These features make SoundMindAI the choice for professionals who need precise control over their transcripts and recordings.
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="compare-cta">
+        <div class="container">
+            <h2>Stop Paying <span style="color: #60A5FA;">Forever</span>. Start <span style="color: #60A5FA;">Owning</span> Today.</h2>
+            <p>Get lifetime access to <span style="color: #FFFFFF;">Sound</span><span style="color: #60A5FA;">Mind</span><span style="color: #FFFFFF;">AI</span> for less than 6 months of Fireflies or Otter.</p>
+
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="downloads/SoundMindAI-1.0.0.dmg" class="btn btn-primary btn-large">Get Lifetime Access - $49.95</a>
+                <a href="faq.html" class="btn btn-secondary btn-large">Read FAQ</a>
+            </div>
+
+            <div class="trust-badges" style="margin-top: 48px;">
+                <div class="trust-badge" style="color: rgba(255, 255, 255, 0.8);">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>One-time payment</span>
+                </div>
+                <div class="trust-badge" style="color: rgba(255, 255, 255, 0.8);">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>100% local storage</span>
+                </div>
+                <div class="trust-badge" style="color: rgba(255, 255, 255, 0.8);">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>Private & secure</span>
+                </div>
+                <div class="trust-badge" style="color: rgba(255, 255, 255, 0.8);">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                    </svg>
+                    <span>No subscriptions. Ever.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2025 GrowTech Development, LLC. All rights reserved.</p>
+                <ul class="footer__links">
+                    <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer__link">Terms of Service</a></li>
+                    <li><a href="faq.html" class="footer__link">FAQ</a></li>
+                    <li><a href="mailto:support@soundmindai.net" class="footer__link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
