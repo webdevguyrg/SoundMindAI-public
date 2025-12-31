@@ -253,7 +253,7 @@
             <!-- Quick Navigation -->
             <nav class="faq-nav" id="faq-nav">
                 <a href="#getting-started" class="faq-nav__link">Getting Started</a>
-                <a href="#features" class="faq-nav__link">Key Features</a>
+                <a href="#features" class="faq-nav__link">Features</a>
                 <a href="#recording" class="faq-nav__link">Recording</a>
                 <a href="#transcription" class="faq-nav__link">Transcription</a>
                 <a href="#summarization" class="faq-nav__link">AI Summarization</a>
@@ -417,40 +417,184 @@
                 </details>
             </section>
 
-            <!-- Key Features -->
+            <!-- Features -->
             <section id="features" class="faq-category">
                 <h2 class="faq-category__title">
                     <span class="faq-category__icon">✨</span>
-                    Key Features
+                    Features
                 </h2>
 
-                <details class="faq-item" id="feature-ai-split">
-                    <summary>What is AI Split and how does it work?</summary>
+                <details class="faq-item" id="feature-capture">
+                    <summary>How does audio capture work?</summary>
                     <div class="faq-item__content">
-                        <p><strong>AI Split</strong> intelligently breaks large transcript blocks into smaller, readable chunks using AI analysis.</p>
-                        <p><strong>Why use AI Split?</strong></p>
+                        <p><strong>Capture Everything</strong> — Record system audio and microphone simultaneously. Zoom, Teams, YouTube, podcasts — anything you can hear.</p>
+                        <p><strong>Audio sources:</strong></p>
                         <ul>
-                            <li>Some transcription services return one giant wall of text</li>
-                            <li>Long paragraphs are hard to read and navigate</li>
-                            <li>AI Split adds logical breaks for sentences, paragraphs, or speaker changes</li>
+                            <li><strong>System Audio:</strong> Capture sound from any application (meetings, videos, music)</li>
+                            <li><strong>Microphone:</strong> Record your voice or room audio</li>
+                            <li><strong>Both:</strong> Record system and mic together for complete meeting capture</li>
                         </ul>
-                        <p><strong>How to use AI Split:</strong></p>
+                        <p><strong>How to start recording:</strong></p>
                         <ol>
-                            <li>Open a recording with a transcript</li>
-                            <li>Click the "AI Split" button in the transcript toolbar</li>
-                            <li>The AI will analyze the content and add appropriate breaks</li>
-                            <li>Your transcript becomes easier to read and skim</li>
+                            <li>Click the large red record button on the main screen</li>
+                            <li>Select your audio sources (system, mic, or both)</li>
+                            <li>The timer starts and you'll see a visual indicator</li>
+                            <li>Click stop when done — your recording is saved automatically</li>
                         </ol>
                         <div class="tip-box">
-                            <strong>Tip:</strong> AI Split uses your configured AI provider. Results may vary depending on the model used.
+                            <strong>Tip:</strong> You can pause and resume recordings without creating multiple files.
                         </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-transcription">
+                    <summary>What transcription options are available?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>AI Transcription</strong> converts speech to text with accurate, timestamped transcripts ready in minutes.</p>
+                        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--color-border);">
+                                    <th style="text-align: left; padding: 0.5rem;">Service</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Cost</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Speed</th>
+                                    <th style="text-align: left; padding: 0.5rem;">Accuracy</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.5rem;"><strong>Apple Speech</strong></td>
+                                    <td style="padding: 0.5rem;">Free (built-in)</td>
+                                    <td style="padding: 0.5rem;">Fast</td>
+                                    <td style="padding: 0.5rem;">Good</td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--color-border);">
+                                    <td style="padding: 0.5rem;"><strong>OpenAI Whisper</strong></td>
+                                    <td style="padding: 0.5rem;">~$0.006/min</td>
+                                    <td style="padding: 0.5rem;">Fast</td>
+                                    <td style="padding: 0.5rem;">Excellent</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 0.5rem;"><strong>AssemblyAI</strong></td>
+                                    <td style="padding: 0.5rem;">~$0.0065/min</td>
+                                    <td style="padding: 0.5rem;">Fast</td>
+                                    <td style="padding: 0.5rem;">Excellent + Speaker ID</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Apple Speech</strong> requires no setup and works offline. BYOK services offer higher accuracy but require API keys.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-summaries">
+                    <summary>What AI summaries does SoundMindAI generate?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Smart Summaries</strong> — Get AI-generated summaries, bullet points, and action items. Choose from Claude, GPT-4, Gemini, and more.</p>
+                        <p>SoundMindAI extracts meaningful insights from your transcripts:</p>
+                        <ul>
+                            <li><strong>Summary:</strong> Concise overview of the content</li>
+                            <li><strong>Key Points:</strong> Important highlights and takeaways</li>
+                            <li><strong>Action Items:</strong> Tasks and follow-ups identified from the conversation</li>
+                        </ul>
+                        <p>Each item includes timestamps so you can jump to the relevant part of the recording.</p>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Different AI providers have different strengths. Experiment to find what works best for your content.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-organize">
+                    <summary>How do I organize my recordings?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Stay Organized</strong> — Tag, search, and filter your recordings. Find any meeting instantly with full-text search.</p>
+                        <ul>
+                            <li><strong>Tags:</strong> Add custom tags with colors to categorize recordings</li>
+                            <li><strong>Search:</strong> Full-text search across titles, transcripts, and tags</li>
+                            <li><strong>Sort:</strong> Sort by date, duration, or name</li>
+                            <li><strong>Filter:</strong> Filter by tags, date range, or transcription status</li>
+                        </ul>
+                        <p><strong>Adding tags:</strong></p>
+                        <ol>
+                            <li>Select a recording from your library</li>
+                            <li>Click the Tags section in the detail view</li>
+                            <li>Type a tag name and press Enter, or select from existing tags</li>
+                            <li>Click the color dot to change tag color</li>
+                        </ol>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-click-to-seek">
+                    <summary>How does click-to-seek work?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Click-to-Seek</strong> — Jump to any moment in your recording. Click on any transcript line to hear exactly what was said.</p>
+                        <p><strong>How it works:</strong></p>
+                        <ul>
+                            <li>Every transcript segment has a timestamp</li>
+                            <li>Click any segment to jump the audio player to that exact moment</li>
+                            <li>The current segment highlights as the audio plays</li>
+                            <li>Works with summaries and action items too — click to hear the context</li>
+                        </ul>
+                        <p><strong>Navigation shortcuts:</strong></p>
+                        <ul>
+                            <li>Use arrow keys to move between segments</li>
+                            <li>Press Space to play/pause</li>
+                            <li>Click timestamps in summaries to jump to that point</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-import">
+                    <summary>How do I import existing audio and video files?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Import Any Media</strong> — Drop in MP3, MP4, M4A, WAV, and more to transcribe and summarize.</p>
+                        <p><strong>Supported formats:</strong></p>
+                        <ul>
+                            <li><strong>Audio:</strong> MP3, M4A, WAV, CAF, AIFF</li>
+                            <li><strong>Video:</strong> MP4, MOV (audio is extracted automatically)</li>
+                        </ul>
+                        <p><strong>How to import:</strong></p>
+                        <ol>
+                            <li><strong>Drag and drop</strong> files directly onto the SoundMindAI window</li>
+                            <li>Or use <strong>File > Import</strong> from the menu bar</li>
+                            <li>The file is added to your library and ready for transcription</li>
+                        </ol>
+                        <p><strong>Use cases:</strong></p>
+                        <ul>
+                            <li>Transcribe podcast episodes you want to reference</li>
+                            <li>Process lecture recordings from school</li>
+                            <li>Import voice memos recorded on your phone</li>
+                            <li>Extract insights from interview recordings</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Imported files stay in their original location — SoundMindAI references them without duplicating.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-export">
+                    <summary>What export options are available?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Export Anywhere</strong> — Export transcripts and summaries in multiple formats.</p>
+                        <p><strong>Export formats:</strong></p>
+                        <ul>
+                            <li><strong>Plain Text (.txt):</strong> Simple text format</li>
+                            <li><strong>Markdown (.md):</strong> Formatted for documentation</li>
+                            <li><strong>HTML (.html):</strong> Web-ready with styling</li>
+                            <li><strong>SRT Subtitles (.srt):</strong> For video editing and YouTube</li>
+                            <li><strong>VTT Subtitles (.vtt):</strong> Web video subtitle format</li>
+                        </ul>
+                        <p><strong>Export options:</strong></p>
+                        <ul>
+                            <li>Include or exclude timestamps</li>
+                            <li>Include or exclude speaker labels</li>
+                            <li>Export transcript, summary, or both</li>
+                        </ul>
                     </div>
                 </details>
 
                 <details class="faq-item" id="feature-ai-chat">
                     <summary>What is AI Chat and how do I use it?</summary>
                     <div class="faq-item__content">
-                        <p><strong>AI Chat</strong> lets you ask questions about your recordings and get instant answers based on the transcript content.</p>
+                        <p><strong>AI Chat</strong> — Ask questions about your recordings and get instant AI-powered answers.</p>
                         <p><strong>How to use AI Chat:</strong></p>
                         <ol>
                             <li>Open a recording that has been transcribed</li>
@@ -471,30 +615,85 @@
                     </div>
                 </details>
 
-                <details class="faq-item" id="feature-import">
-                    <summary>How do I import existing audio and video files?</summary>
+                <details class="faq-item" id="feature-editing">
+                    <summary>Can I edit transcripts?</summary>
                     <div class="faq-item__content">
-                        <p><strong>Import Any Media</strong> lets you transcribe and summarize audio/video files you already have — not just new recordings.</p>
-                        <p><strong>Supported formats:</strong></p>
+                        <p><strong>Transcript Editing</strong> — Edit text, split or merge segments, and manage speaker names. Full control over your transcripts.</p>
                         <ul>
-                            <li><strong>Audio:</strong> MP3, M4A, WAV, CAF, AIFF</li>
-                            <li><strong>Video:</strong> MP4, MOV (audio is extracted automatically)</li>
+                            <li><strong>Edit text:</strong> Click on any transcript segment to edit the text directly</li>
+                            <li><strong>Split segments:</strong> Break a long segment into two separate parts</li>
+                            <li><strong>Merge segments:</strong> Combine adjacent segments into one</li>
+                            <li><strong>Manage speakers:</strong> Assign or change the speaker for any segment</li>
+                            <li><strong>Auto-save:</strong> All changes are saved automatically</li>
                         </ul>
-                        <p><strong>How to import:</strong></p>
+                        <p>Original timestamps are preserved when editing text, and adjusted appropriately when splitting segments.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-speaker-diarization">
+                    <summary>What is speaker diarization?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Speaker Diarization</strong> — Know who said what with automatic speaker identification.</p>
+                        <p>Speaker diarization automatically identifies and labels different speakers in a recording (e.g., "Speaker 1", "Speaker 2").</p>
+                        <p><strong>How to enable it:</strong></p>
                         <ol>
-                            <li><strong>Drag and drop</strong> files directly onto the SoundMindAI window</li>
-                            <li>Or use <strong>File > Import</strong> from the menu bar</li>
-                            <li>The file is added to your library and ready for transcription</li>
+                            <li>Set up an AssemblyAI API key in Settings</li>
+                            <li>Select AssemblyAI as your transcription provider</li>
+                            <li>Transcribe your recording — speakers are automatically detected</li>
+                            <li>Rename generic labels (Speaker 1, Speaker 2) to actual names</li>
                         </ol>
-                        <p><strong>Use cases:</strong></p>
+                        <p><strong>Speaker management:</strong></p>
                         <ul>
-                            <li>Transcribe podcast episodes you want to reference</li>
-                            <li>Process lecture recordings from school</li>
-                            <li>Import voice memos recorded on your phone while away</li>
-                            <li>Extract insights from interview recordings</li>
+                            <li>Click the person icon next to any segment to change the speaker</li>
+                            <li>Click the pencil icon to rename a speaker (updates everywhere)</li>
+                            <li>Choose custom colors to easily distinguish speakers</li>
+                            <li>Filter transcript by speaker to see only their segments</li>
+                        </ul>
+                        <p><strong>Note:</strong> Speaker diarization is only available with AssemblyAI. Apple Speech and OpenAI Whisper do not support automatic speaker identification.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-bookmarks">
+                    <summary>How do I bookmark important parts of a transcript?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Bookmarks</strong> let you mark and quickly find important moments in your transcripts.</p>
+                        <p><strong>Adding bookmarks:</strong></p>
+                        <ul>
+                            <li>Click the bookmark icon next to any transcript segment</li>
+                            <li>The icon fills in to indicate it's bookmarked</li>
+                            <li>Click again to remove the bookmark</li>
+                        </ul>
+                        <p><strong>Filtering by bookmarks:</strong></p>
+                        <ul>
+                            <li>Click the bookmark filter button in the transcript toolbar</li>
+                            <li>Only bookmarked segments will be shown</li>
+                            <li>Click again to show all segments</li>
                         </ul>
                         <div class="tip-box">
-                            <strong>Tip:</strong> Imported files stay in their original location — SoundMindAI references them without duplicating.
+                            <strong>Tip:</strong> Bookmarks are great for marking action items, important quotes, or moments you want to revisit.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-ai-split">
+                    <summary>What is AI Split and how does it work?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>AI Split</strong> intelligently breaks large transcript blocks into smaller, readable chunks using AI analysis.</p>
+                        <p><strong>Why use AI Split?</strong></p>
+                        <ul>
+                            <li>Some transcription services return one giant wall of text</li>
+                            <li>Long paragraphs are hard to read and navigate</li>
+                            <li>AI Split adds logical breaks for sentences, paragraphs, or speaker changes</li>
+                        </ul>
+                        <p><strong>How to use AI Split:</strong></p>
+                        <ol>
+                            <li>Open a recording with a transcript</li>
+                            <li>Click the "AI Split" button in the transcript toolbar</li>
+                            <li>The AI will analyze the content and add appropriate breaks</li>
+                            <li>Your transcript becomes easier to read and skim</li>
+                        </ol>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> AI Split uses your configured AI provider. Results may vary depending on the model used.
                         </div>
                     </div>
                 </details>
