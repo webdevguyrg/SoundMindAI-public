@@ -4,8 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ & User Guide - SoundMindAI</title>
+    <meta name="description" content="Get answers about SoundMindAI - setup, recording, transcription, AI summarization, BYOK API keys, troubleshooting, and more. Complete user guide included.">
+    <meta name="keywords" content="SoundMindAI FAQ, SoundMindAI help, meeting recorder setup, transcription guide, BYOK explained, macOS audio recording help, Whisper setup, OpenAI API, Claude API, AssemblyAI setup">
+    <meta name="author" content="GrowTech Development, LLC">
+    <link rel="canonical" href="https://soundmindai.net/faq">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://soundmindai.net/faq">
+    <meta property="og:title" content="FAQ & User Guide - SoundMindAI">
+    <meta property="og:description" content="Complete guide to SoundMindAI: setup, recording, transcription, AI summarization, BYOK API keys, and troubleshooting.">
+    <meta property="og:image" content="https://soundmindai.net/images/og-image.png">
+    <meta property="og:site_name" content="SoundMindAI">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ & User Guide - SoundMindAI">
+    <meta name="twitter:description" content="Complete guide to SoundMindAI: setup, recording, transcription, AI summarization, and BYOK.">
+    <meta name="twitter:image" content="https://soundmindai.net/images/og-image.png">
+
+    <!-- Favicon -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/svg+xml" href="images/nav-icon.svg">
+    <link rel="apple-touch-icon" href="images/icon.png">
+
+    <!-- FAQPage Structured Data for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is SoundMindAI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SoundMindAI is a native macOS application that helps you capture, transcribe, and understand audio content. Whether you're recording meetings, lectures, interviews, or podcasts, SoundMindAI transforms spoken words into organized, searchable text with AI-powered insights. Key capabilities include recording system audio and microphone simultaneously, importing existing audio files, transcribing with Apple Speech (free) or premium AI services, and generating AI summaries and action items."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the system requirements?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SoundMindAI requires macOS 13 (Ventura) or later, works on both Apple Silicon and Intel Macs, needs 100 MB for the app plus space for recordings, and requires Screen Recording (for system audio) and Microphone access permissions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the 7-day free trial work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free trial gives you full access to all features for 7 days with no credit card required. Trial starts when you click 'Start Free Trial', all features are unlocked including BYOK AI services, trial is tied to your Mac (hardware-based), and after 7 days you can purchase a license or continue with limited features."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does BYOK mean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BYOK stands for 'Bring Your Own Keys.' Instead of us charging you for AI services, you get API keys directly from the service providers (like OpenAI or Anthropic) and enter them in SoundMindAI. You create an account with an AI provider, add payment and get an API key from them, enter that API key in SoundMindAI's settings, and then SoundMindAI uses your key to call the AI service directly. You pay the provider directly at their wholesale rates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does SoundMindAI use BYOK instead of including AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BYOK offers significant advantages: Lower cost (pay wholesale rates directly to providers instead of marked-up prices), Choice (pick the AI provider and model that works best for you), Privacy (your data goes directly to the provider - we never see it), Control (set your own usage limits and budgets), and Transparency (see exactly what you're paying for AI services)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What transcription options are available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SoundMindAI offers multiple transcription options: Apple Speech (native, free, on-device, limited to 5 minutes), OpenAI Whisper (BYOK, approximately $0.006 per minute, highly accurate), and AssemblyAI (BYOK, approximately $0.015 per minute, includes speaker diarization)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which AI providers are supported?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SoundMindAI supports multiple AI providers for summarization: OpenAI (GPT-4o, GPT-4, GPT-3.5-turbo), Anthropic (Claude 3.5 Sonnet, Claude 3 Opus), Google (Gemini 1.5 Pro, Gemini 1.5 Flash), HuggingFace (various open-source models), and OpenRouter (access to multiple providers with one key)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my API keys secure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, your API keys are stored securely in macOS Keychain, the same place your passwords are stored. Keys are encrypted using macOS system-level encryption, never leave your Mac (except when making API calls to providers), and we cannot access, view, or retrieve your keys."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I edit transcripts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! SoundMindAI provides comprehensive transcript editing. You can edit text by clicking on any transcript segment, split segments to break a long segment into two separate parts, merge segments to combine adjacent segments into one, and manage speakers by assigning or changing the speaker for any segment."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I organize my recordings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SoundMindAI provides several ways to organize your recordings: Tags (add custom tags with colors to categorize recordings), Folders (create folders to group related recordings), Search (search by title, transcript content, or tags), Sort (sort by date, duration, or name), and Filters (filter by tags, transcription status, or date range)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I export my recordings and transcripts?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! SoundMindAI offers flexible export options including Plain Text (.txt), Markdown (.md), HTML (.html), JSON (.json), SRT Subtitles (.srt), and VTT Subtitles (.vtt). You can export transcripts with or without timestamps, summaries, and speaker labels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where are my recordings stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "By default, recordings are stored in ~/Library/Application Support/SoundMindAI/Recordings/. You can change the storage location in Settings > Storage. All recordings remain on your Mac - nothing is uploaded to the cloud."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->

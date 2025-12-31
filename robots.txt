@@ -1,0 +1,10 @@
+# robots.txt for SoundMindAI
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://soundmindai.net/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
