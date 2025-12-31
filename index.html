@@ -344,6 +344,125 @@
             color: var(--success);
         }
 
+        /* What's New Section */
+        .whats-new-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        @media (max-width: 968px) {
+            .whats-new-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .whats-new-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .whats-new-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .whats-new-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-blue);
+        }
+
+        .whats-new-image {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .whats-new-placeholder {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-blue);
+            box-shadow: var(--shadow-md);
+        }
+
+        .whats-new-content {
+            padding: 24px;
+        }
+
+        .whats-new-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .whats-new-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .whats-new-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .whats-new-link:hover {
+            color: var(--primary-hover);
+            text-decoration: underline;
+        }
+
+        .whats-new-extras {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .whats-new-bullet {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px 20px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        .whats-new-bullet svg {
+            width: 20px;
+            height: 20px;
+            color: var(--success);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .whats-new-bullet strong {
+            color: var(--primary-blue-dark);
+        }
+
         /* Features Grid */
         .features-grid {
             display: grid;
@@ -733,6 +852,7 @@
                 <span class="logo-name"><span class="logo-text">Sound</span><span class="logo-accent">Mind</span><span class="logo-text">AI</span></span>
             </a>
             <ul class="nav-links">
+                <li><a href="#whats-new">What's New</a></li>
                 <li><a href="#features">Features</a></li>
                 <li><a href="#byok">BYOK</a></li>
                 <li><a href="#pricing">Pricing</a></li>
@@ -797,6 +917,83 @@
                         <polyline points="20 6 9 17 4 12"/>
                     </svg>
                     100% local storage
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's New -->
+    <section id="whats-new" class="section section--alt">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-eyebrow">What's New</span>
+                <h2 class="section-title">Latest Features</h2>
+                <p class="section-subtitle mx-auto">
+                    We're constantly improving SoundMindAI. Here's what's new.
+                </p>
+            </div>
+            <div class="whats-new-grid">
+                <div class="whats-new-card">
+                    <div class="whats-new-image">
+                        <div class="whats-new-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="whats-new-content">
+                        <h3 class="whats-new-title">✨ AI Split</h3>
+                        <p class="whats-new-description">
+                            Imported a long speech or lecture? AI Split intelligently breaks massive transcript blocks into logical paragraphs, sentences, or timed chunks. Instantly transform a wall of text into a scannable, navigable transcript. No more manual splitting.
+                        </p>
+                        <a href="faq#feature-ai-split" class="whats-new-link">Learn more →</a>
+                    </div>
+                </div>
+                <div class="whats-new-card">
+                    <div class="whats-new-image">
+                        <div class="whats-new-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="whats-new-content">
+                        <h3 class="whats-new-title">💬 AI Chat</h3>
+                        <p class="whats-new-description">
+                            Ask questions about your recordings and get instant AI-powered answers. "What were the action items?" "Summarize John's points." Your transcript, your AI assistant.
+                        </p>
+                        <a href="faq#feature-ai-chat" class="whats-new-link">Learn more →</a>
+                    </div>
+                </div>
+                <div class="whats-new-card">
+                    <div class="whats-new-image">
+                        <div class="whats-new-placeholder">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="whats-new-content">
+                        <h3 class="whats-new-title">📂 Import Any Media</h3>
+                        <p class="whats-new-description">
+                            Drop in MP3, MP4, M4A, WAV, and more to transcribe and summarize. Podcast episodes, lecture recordings, voice memos from meetings on the go — work with audio you already have.
+                        </p>
+                        <a href="faq#feature-import" class="whats-new-link">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="whats-new-extras">
+                <div class="whats-new-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    <span><strong>Speaker Diarization</strong> — Know who said what with automatic speaker identification via AssemblyAI</span>
+                </div>
+                <div class="whats-new-bullet">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    <span><strong>SRT Subtitle Export</strong> — Export transcripts as subtitle files for video editing, YouTube, or accessibility</span>
                 </div>
             </div>
         </div>

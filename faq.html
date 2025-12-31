@@ -108,6 +108,30 @@
         },
         {
           "@type": "Question",
+          "name": "What is AI Split and how does it work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Split intelligently breaks large transcript blocks into smaller, readable chunks using AI analysis. Some transcription services return one giant wall of text that's hard to read and navigate. AI Split adds logical breaks for sentences, paragraphs, or speaker changes, making your transcript easier to read and skim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AI Chat and how do I use it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI Chat lets you ask questions about your recordings and get instant answers based on the transcript content. Open a recording that has been transcribed, click the Chat tab, and type your question. Example questions include 'What action items were discussed?', 'Summarize what John said about the budget', or 'List all the names mentioned in this meeting'."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I import existing audio and video files?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Import Any Media lets you transcribe and summarize audio/video files you already have. Supported formats include MP3, M4A, WAV, CAF, AIFF for audio and MP4, MOV for video (audio is extracted automatically). Simply drag and drop files onto the SoundMindAI window or use File > Import from the menu bar."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "Can I edit transcripts?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -229,6 +253,7 @@
             <!-- Quick Navigation -->
             <nav class="faq-nav" id="faq-nav">
                 <a href="#getting-started" class="faq-nav__link">Getting Started</a>
+                <a href="#features" class="faq-nav__link">Key Features</a>
                 <a href="#recording" class="faq-nav__link">Recording</a>
                 <a href="#transcription" class="faq-nav__link">Transcription</a>
                 <a href="#summarization" class="faq-nav__link">AI Summarization</a>
@@ -387,6 +412,89 @@
                         </ul>
                         <div class="tip-box">
                             <strong>Note:</strong> Your license key remains valid after deactivation. You can reactivate anytime by entering the same key on any Mac.
+                        </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Key Features -->
+            <section id="features" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">✨</span>
+                    Key Features
+                </h2>
+
+                <details class="faq-item" id="feature-ai-split">
+                    <summary>What is AI Split and how does it work?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>AI Split</strong> intelligently breaks large transcript blocks into smaller, readable chunks using AI analysis.</p>
+                        <p><strong>Why use AI Split?</strong></p>
+                        <ul>
+                            <li>Some transcription services return one giant wall of text</li>
+                            <li>Long paragraphs are hard to read and navigate</li>
+                            <li>AI Split adds logical breaks for sentences, paragraphs, or speaker changes</li>
+                        </ul>
+                        <p><strong>How to use AI Split:</strong></p>
+                        <ol>
+                            <li>Open a recording with a transcript</li>
+                            <li>Click the "AI Split" button in the transcript toolbar</li>
+                            <li>The AI will analyze the content and add appropriate breaks</li>
+                            <li>Your transcript becomes easier to read and skim</li>
+                        </ol>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> AI Split uses your configured AI provider. Results may vary depending on the model used.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-ai-chat">
+                    <summary>What is AI Chat and how do I use it?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>AI Chat</strong> lets you ask questions about your recordings and get instant answers based on the transcript content.</p>
+                        <p><strong>How to use AI Chat:</strong></p>
+                        <ol>
+                            <li>Open a recording that has been transcribed</li>
+                            <li>Click the "Chat" tab in the detail view</li>
+                            <li>Type your question (e.g., "What were the main decisions made?")</li>
+                            <li>The AI will analyze the transcript and provide an answer</li>
+                        </ol>
+                        <p><strong>Example questions:</strong></p>
+                        <ul>
+                            <li>"What action items were discussed?"</li>
+                            <li>"Summarize what John said about the budget"</li>
+                            <li>"What were the concerns raised about the timeline?"</li>
+                            <li>"List all the names mentioned in this meeting"</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> AI Chat uses your configured AI provider (OpenAI, Anthropic, etc.). Make sure you have an AI provider set up in Settings.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item" id="feature-import">
+                    <summary>How do I import existing audio and video files?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Import Any Media</strong> lets you transcribe and summarize audio/video files you already have — not just new recordings.</p>
+                        <p><strong>Supported formats:</strong></p>
+                        <ul>
+                            <li><strong>Audio:</strong> MP3, M4A, WAV, CAF, AIFF</li>
+                            <li><strong>Video:</strong> MP4, MOV (audio is extracted automatically)</li>
+                        </ul>
+                        <p><strong>How to import:</strong></p>
+                        <ol>
+                            <li><strong>Drag and drop</strong> files directly onto the SoundMindAI window</li>
+                            <li>Or use <strong>File > Import</strong> from the menu bar</li>
+                            <li>The file is added to your library and ready for transcription</li>
+                        </ol>
+                        <p><strong>Use cases:</strong></p>
+                        <ul>
+                            <li>Transcribe podcast episodes you want to reference</li>
+                            <li>Process lecture recordings from school</li>
+                            <li>Import voice memos recorded on your phone while away</li>
+                            <li>Extract insights from interview recordings</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> Imported files stay in their original location — SoundMindAI references them without duplicating.
                         </div>
                     </div>
                 </details>
