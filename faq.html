@@ -282,6 +282,7 @@
                 <a href="#transcription" class="faq-nav__link">Transcription</a>
                 <a href="#summarization" class="faq-nav__link">AI Summarization</a>
                 <a href="#byok" class="faq-nav__link">BYOK Explained</a>
+                <a href="#setup" class="faq-nav__link">Setup Guide</a>
                 <a href="#api-setup" class="faq-nav__link">API Setup</a>
                 <a href="#organization" class="faq-nav__link">Organization</a>
                 <a href="#playback" class="faq-nav__link">Playback</a>
@@ -1292,6 +1293,157 @@
                                 <li><a href="https://www.assemblyai.com/pricing" target="_blank" rel="noopener">AssemblyAI Pricing</a></li>
                             </ul>
                         </div>
+                    </div>
+                </details>
+            </section>
+
+            <!-- Quick Start Setup Guide -->
+            <section id="setup" class="faq-category">
+                <h2 class="faq-category__title">
+                    <span class="faq-category__icon">&#9889;</span>
+                    Quick Start Setup Guide
+                </h2>
+
+                <details class="faq-item" open>
+                    <summary>How do I set up SoundMindAI for best results?</summary>
+                    <div class="faq-item__content">
+                        <p>SoundMindAI uses a <strong>BYOK (Bring Your Own Keys)</strong> model, which means you connect your own AI service accounts. This gives you lower costs, more privacy, and full control. Here's how to get the best experience:</p>
+
+                        <div class="setup-overview" style="background: var(--color-bg-secondary); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
+                            <h4 style="margin-top: 0; color: var(--color-primary);">What You'll Set Up</h4>
+                            <div style="display: grid; gap: 1rem; margin-top: 1rem;">
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <span style="font-size: 1.5rem;">1.</span>
+                                    <div>
+                                        <strong>Transcription</strong> - Converts your audio to text<br>
+                                        <span style="color: var(--color-text-secondary); font-size: 0.9rem;">Options: Native macOS (free) or OpenAI Whisper (more accurate) or AssemblyAI</span>
+                                    </div>
+                                </div>
+                                <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+                                    <span style="font-size: 1.5rem;">2.</span>
+                                    <div>
+                                        <strong>AI Summarization</strong> - Generates summaries and action items<br>
+                                        <span style="color: var(--color-text-secondary); font-size: 0.9rem;">Options: OpenAI GPT, Anthropic Claude, Google Gemini, and more</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Recommended setup for best results (5 minutes)</summary>
+                    <div class="faq-item__content">
+                        <p>For the best transcription accuracy and AI summaries, we recommend <strong>OpenAI</strong> - one account gives you both Whisper (transcription) and GPT (summarization).</p>
+
+                        <div class="api-steps">
+                            <div class="api-step">
+                                <h4>Step 1: Create OpenAI Account</h4>
+                                <p>Go to <a href="https://platform.openai.com/signup" target="_blank" rel="noopener">platform.openai.com/signup</a> and create a free account.</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Step 2: Add Payment Method</h4>
+                                <p>Go to <strong>Settings > Billing</strong> and add a credit card. You only pay for what you use (typically $0.01-0.05 per recording).</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Step 3: Generate API Key</h4>
+                                <p>Go to <strong>API Keys</strong> section, click <strong>"Create new secret key"</strong>, name it "SoundMindAI", and <strong>copy it immediately</strong> (you won't see it again).</p>
+                            </div>
+                            <div class="api-step">
+                                <h4>Step 4: Configure SoundMindAI</h4>
+                                <p>In SoundMindAI, go to <strong>Tools > Settings</strong>:</p>
+                                <ul style="margin-top: 0.5rem;">
+                                    <li>Under <strong>Transcription</strong>, select <strong>"Whisper API"</strong></li>
+                                    <li>Under <strong>AI Summarization</strong>, select <strong>"OpenAI"</strong></li>
+                                    <li>Paste your API key when prompted</li>
+                                </ul>
+                            </div>
+                            <div class="api-step">
+                                <h4>Step 5: Test Your Setup</h4>
+                                <p>Make a short test recording (30 seconds), then check:</p>
+                                <ul style="margin-top: 0.5rem;">
+                                    <li>The status indicators in the sidebar should show <span style="color: #22c55e;">green</span></li>
+                                    <li>After recording, transcription should appear</li>
+                                    <li>AI summary and action items should generate</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="tip-box">
+                            <strong>Cost Tip:</strong> Set a monthly spending limit in OpenAI's Billing settings (e.g., $10/month) to avoid surprises. Most users spend $1-5/month.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Alternative: Free setup with native transcription</summary>
+                    <div class="faq-item__content">
+                        <p>If you prefer not to set up API keys, SoundMindAI works out of the box with <strong>native macOS transcription</strong>:</p>
+
+                        <ul>
+                            <li><strong>Transcription:</strong> Uses Apple's built-in Speech Recognition (free, on-device)</li>
+                            <li><strong>AI Summarization:</strong> Not available without an API key</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;"><strong>Limitations of native transcription:</strong></p>
+                        <ul>
+                            <li>Limited to recordings under 5 minutes</li>
+                            <li>Less accurate than Whisper for technical content</li>
+                            <li>No AI summaries or action items</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;">This is a good option for quick tests, but for regular use we recommend setting up OpenAI for the full experience.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Understanding the status indicators</summary>
+                    <div class="faq-item__content">
+                        <p>The sidebar shows the status of your transcription and AI providers:</p>
+
+                        <div style="background: var(--color-bg-secondary); border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 10px; height: 10px; background: #22c55e; border-radius: 50%; display: inline-block;"></span>
+                                <strong>Green</strong> - Configured and ready to use
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.75rem;">
+                                <span style="width: 10px; height: 10px; background: #ef4444; border-radius: 50%; display: inline-block;"></span>
+                                <strong>Red</strong> - Needs setup (missing API key or provider not selected)
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="width: 10px; height: 10px; background: #9ca3af; border-radius: 50%; display: inline-block;"></span>
+                                <strong>Gray</strong> - License required (trial expired)
+                            </div>
+                        </div>
+
+                        <p>Click on either indicator to quickly change providers without going to Settings.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Troubleshooting setup issues</summary>
+                    <div class="faq-item__content">
+                        <p><strong>"Invalid API key" error:</strong></p>
+                        <ul>
+                            <li>Make sure you copied the entire key (no extra spaces)</li>
+                            <li>Check that you have billing set up with the provider</li>
+                            <li>Try generating a new key if the old one isn't working</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;"><strong>"Insufficient quota" or "Rate limit" error:</strong></p>
+                        <ul>
+                            <li>Add credits or a payment method to your provider account</li>
+                            <li>Check your usage limits in the provider's dashboard</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;"><strong>Transcription not working:</strong></p>
+                        <ul>
+                            <li>Verify the API key is entered correctly in Settings</li>
+                            <li>Check that the correct transcription provider is selected</li>
+                            <li>Try the API Diagnostics tool in Settings to test connectivity</li>
+                        </ul>
+
+                        <p style="margin-top: 1rem;"><strong>Still having issues?</strong> See the detailed setup guides below for your specific provider, or check the <a href="#troubleshooting">Troubleshooting</a> section.</p>
                     </div>
                 </details>
             </section>
