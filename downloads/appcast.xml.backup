@@ -7,6 +7,22 @@
     <language>en</language>
 
     <item>
+      <title>Version 1.0.1</title>
+      <pubDate>Sun, 18 Jan 2026 00:52:28 +0000</pubDate>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[
+        <p>SoundMindAI 1.0.1 release.</p>
+      ]]></description>
+      <enclosure
+        url="https://soundmindai.net/downloads/SoundMindAI-1.0.1.dmg"
+        sparkle:edSignature="TLuFOU334JK3tNJWNHf1x9dkLAoIHX8wgBW5fZbupsARbJpPY8LKQ8KeAmolyxEjUwKKX4sHUga+Gi5XLstUAg=="
+        length="7308235"
+        type="application/octet-stream" />
+    </item>
+
+    <item>
       <title>Version 1.0.0</title>
       <pubDate>Mon, 29 Dec 2025 12:00:00 +0000</pubDate>
       <sparkle:version>1</sparkle:version>
