@@ -8,7 +8,7 @@
 
     <item>
       <title>Version 1.1.0</title>
-      <pubDate>Sun, 18 Jan 2026 15:27:55 +0000</pubDate>
+      <pubDate>Sun, 18 Jan 2026 15:29:26 +0000</pubDate>
       <sparkle:version>5</sparkle:version>
       <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
@@ -17,24 +17,8 @@
       ]]></description>
       <enclosure
         url="https://soundmindai.net/downloads/SoundMindAI-1.1.0.dmg"
-        sparkle:edSignature="BQ1h6c6zQbSZQuNPJOkJw3t45rJ27mdviJADGt4r/wIDm3uU/kjKD8ekyl/KDjwJNAYB959ZKEAmUryJEiy4Dw=="
+        sparkle:edSignature="I0CfwkU7wuxvvrPnmYzgHZuEBAVY6bErReL33WzTX+JaeMgRIIqvWeYThOOoPn2paHSFC72ShXnpcltHvxkUCQ=="
         length="7414146"
-        type="application/octet-stream" />
-    </item>
-
-    <item>
-      <title>Version 1.1.0</title>
-      <pubDate>Sun, 18 Jan 2026 15:11:09 +0000</pubDate>
-      <sparkle:version>5</sparkle:version>
-      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
-      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[
-        <p>SoundMindAI 1.1.0 release.</p>
-      ]]></description>
-      <enclosure
-        url="https://soundmindai.net/downloads/SoundMindAI-1.1.0.dmg"
-        sparkle:edSignature="qgYLAX1OI9Ei2COVl5crlvxJhr6yDDMpQdFHIcXHFOit67Gbm6BlxQk25iNEdcty4Nqav2zQVHqjqxvBirjNDQ=="
-        length="7414169"
         type="application/octet-stream" />
     </item>
 
