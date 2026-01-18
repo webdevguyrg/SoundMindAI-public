@@ -344,6 +344,29 @@
             color: var(--success);
         }
 
+        /* Hero Showcase - MacBook Image */
+        .hero-showcase {
+            background: #FFFFFF;
+            padding: 0 24px 60px 24px;
+        }
+
+        .hero-showcase-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero-showcase-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .hero-showcase {
+                padding: 0 16px 40px 16px;
+            }
+        }
+
         /* What's New Section */
         .whats-new-grid {
             display: grid;
@@ -942,6 +965,19 @@
             </div>
         </div>
     </section>
+
+    <!-- Hero Showcase - MacBook Display (HIDDEN until better image ready)
+    <section class="hero-showcase">
+        <div class="hero-showcase-inner">
+            <img
+                src="images/hero-3-laptops.jpg"
+                alt="SoundMindAI running on MacBook Pro - Dashboard, AI Summary, and Import views"
+                class="hero-showcase-image"
+                loading="eager"
+            >
+        </div>
+    </section>
+    -->
 
     <!-- What's New -->
     <section id="whats-new" class="section" style="background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);">
