@@ -188,6 +188,14 @@
         },
         {
           "@type": "Question",
+          "name": "How does auto-stop after silence work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Auto-stop After Silence automatically stops recording when no audio is detected for a configurable duration. During recording, SoundMindAI monitors audio levels. When audio drops below a threshold, a timer starts. If silence continues for the configured duration, recording stops automatically. Any sound resets the timer. Configure it in Settings > Audio section. Duration can be set from 15 seconds to hours. Default is enabled with 5 minutes."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "How do automatic updates work?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -832,6 +840,42 @@
                         </ul>
                         <div class="tip-box">
                             <strong>Tip:</strong> Mini Recorder is perfect for recording meetings while taking notes in other apps, or for long recording sessions where you don't need the full interface.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How does auto-stop after silence work?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>Auto-stop After Silence</strong> — Automatically stops recording when no audio is detected for a configurable duration. Perfect for hands-free recording sessions.</p>
+                        <p><strong>How it works:</strong></p>
+                        <ul>
+                            <li>During recording, SoundMindAI monitors audio levels</li>
+                            <li>When audio drops below a threshold (very quiet/silence), a timer starts</li>
+                            <li>If silence continues for the configured duration, recording stops automatically</li>
+                            <li>Any sound resets the silence timer</li>
+                        </ul>
+                        <p><strong>How to configure:</strong></p>
+                        <ol>
+                            <li>Open Settings (⌘,) or click the gear icon</li>
+                            <li>Scroll to the Audio section</li>
+                            <li>Toggle "Auto-stop recordings after silence" on or off</li>
+                            <li>Set your desired duration and unit (seconds, minutes, or hours)</li>
+                        </ol>
+                        <p><strong>Use cases:</strong></p>
+                        <ul>
+                            <li>Recording a meeting that might end early — the recording stops itself</li>
+                            <li>Capturing voice memos without needing to manually stop</li>
+                            <li>Recording background audio where you want to stop after extended silence</li>
+                        </ul>
+                        <p><strong>Settings:</strong></p>
+                        <ul>
+                            <li><strong>Duration:</strong> Set from 15 seconds up to hours</li>
+                            <li><strong>Units:</strong> Choose seconds, minutes, or hours</li>
+                            <li><strong>Default:</strong> Enabled with 5 minutes</li>
+                        </ul>
+                        <div class="tip-box">
+                            <strong>Tip:</strong> 5 minutes is a good default to avoid premature stops during natural conversation pauses.
                         </div>
                     </div>
                 </details>

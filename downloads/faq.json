@@ -1,0 +1,382 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-01-19T13:02:09Z",
+  "faqCount": 75,
+  "items": [
+    {
+      "category": "getting-started",
+      "question": "What is SoundMindAI?",
+      "answer": "SoundMindAI is a native macOS application that helps you capture, transcribe, and understand audio content. Whether you're recording meetings, lectures, interviews, or podcasts, SoundMindAI transforms spoken words into organized, searchable text with AI-powered insights. \n\nKey capabilities: \n• Record system audio and microphone simultaneously \n• Import existing audio files \n• Transcribe with Apple Speech (free) or premium AI services \n• Generate summaries, key points, and action items using AI \n• Organize recordings with tags, folders, and search \n• Export in multiple formats"
+    },
+    {
+      "category": "getting-started",
+      "question": "What are the system requirements?",
+      "answer": "• macOS: macOS 13 (Ventura) or later \n• Processor: Apple Silicon or Intel Mac \n• Storage: 100 MB for the app, plus space for recordings \n• Permissions: Screen Recording (for system audio) and Microphone access Tip: Screen Recording permission is required even for audio-only capture because macOS uses ScreenCaptureKit for system audio access."
+    },
+    {
+      "category": "getting-started",
+      "question": "How do I grant the required permissions?",
+      "answer": "On first launch, SoundMindAI will request the necessary permissions. If you need to enable them manually: Open System Settings \n\nClick the Apple menu > System Settings > Privacy & Security"
+    },
+    {
+      "category": "getting-started",
+      "question": "How does the 7-day free trial work?",
+      "answer": "The free trial gives you full access to all features for 7 days. No credit card required. \n• Trial starts when you click \"Start Free Trial\" \n• All features are unlocked including BYOK AI services \n• Trial is tied to your Mac (hardware-based), not your email \n• After 7 days, purchase a license or continue with limited features \n\nAfter trial expires: You can still record and use Apple Speech transcription. BYOK AI features require a license."
+    },
+    {
+      "category": "getting-started",
+      "question": "How private and secure is SoundMindAI?",
+      "answer": "SoundMindAI is designed with privacy as a core principle. Your data stays on your Mac. \n\nWhat stays local: \n• All recordings and audio files \n• All transcripts and AI summaries \n• Your API keys (stored in macOS Keychain) \n• App settings and preferences \n\nWhat we do NOT do: \n• Collect analytics or usage data \n• Track your behavior or features used \n• Upload your recordings or transcripts \n• Sell or share your data \n\nOnly network connections: \n• License validation: Periodic check with our licensing server (no personal data sent) \n• BYOK services: When you click transcribe or summarize, your audio/text goes directly to your chosen provider (OpenAI, Anthropic, etc.) - not through us Note: When using BYOK AI services, your data is transmitted directly to those providers. Review their privacy policies to understand how they handle your data."
+    },
+    {
+      "category": "getting-started",
+      "question": "What's the difference between the license fee and AI costs?",
+      "answer": "There are two separate costs to understand: \n\n1. SoundMindAI License (one-time, paid to us): \n• $49.95 one-time payment for lifetime access \n• Covers the app software, updates, and all built-in features \n• Includes Apple Speech transcription (free, on-device) \n• No recurring fees or subscriptions \n\n2. AI Provider Costs (ongoing, paid directly to providers): \n• Paid directly to OpenAI, Anthropic, Google, AssemblyAI, etc. \n• Based on your actual usage (pay-as-you-go) \n• Prices set by each provider - we have no control over their rates \n• Billed separately by each provider to your account with them Important: SoundMindAI does not collect, process, or have any involvement with your AI provider payments. We never see your payment information or usage charges. Any billing questions or disputes regarding AI costs must be handled directly with the respective provider (OpenAI, Anthropic, Google, etc.)."
+    },
+    {
+      "category": "getting-started",
+      "question": "How do I deactivate my license?",
+      "answer": "To deactivate your license from a Mac: \n• Click on the license badge in the top-right corner of the app \n• In the popover, click the \"Deactivate\" button \n• Confirm the deactivation when prompted \n\nWhy deactivate? \n• Moving to a new Mac: Your license allows up to 3 devices. Deactivate from your old Mac to free up a slot for your new one. \n• Selling or giving away your Mac: Remove your license before transferring your computer to someone else. \n• Troubleshooting: If you're having license validation issues, deactivating and re-entering your key can help resolve them. Note: Your license key remains valid after deactivation. You can reactivate anytime by entering the same key on any Mac."
+    },
+    {
+      "category": "getting-started",
+      "question": "How do automatic updates work?",
+      "answer": "Automatic Updates — SoundMindAI can check for new versions automatically and notify you when updates are available. \n\nHow it works: \n• By default, SoundMindAI checks for updates when the app launches \n• If a new version is available, you'll see a notification in the sidebar \n• Click the notification to view update details and install \n• Updates are downloaded and installed seamlessly \n\nManaging update settings: \n• Open Settings (⌘,) or click the gear icon \n• Go to the Tools tab \n• Toggle \"Check for updates on startup\" on or off \n• You can always manually check for updates from the menu: SoundMindAI > Check for Updates Tip: Keeping SoundMindAI up to date ensures you have the latest features, performance improvements, and bug fixes."
+    },
+    {
+      "category": "getting-started",
+      "question": "What if auto-update fails?",
+      "answer": "If you see an error like \"An error occurred while launching the installer\" when trying to update, don't worry — you can easily update manually: \n• Download the latest version from soundmindai.net \n• Quit SoundMindAI if it's running \n• Open the downloaded DMG and drag SoundMindAI to your Applications folder \n• Click \"Replace\" when prompted to overwrite the old version \n• Launch the new version — all your recordings and settings are preserved \n\nWhy does this happen? \n\nThis can occur on older versions (before v1.1.2) due to macOS security requirements. Once you manually update to the latest version, future auto-updates will work normally. Your data is safe: Updating the app never affects your recordings, transcripts, or settings — they're stored separately."
+    },
+    {
+      "category": "features",
+      "question": "How does audio capture work?",
+      "answer": "Capture Everything — Record system audio and microphone simultaneously. Zoom, Teams, YouTube, podcasts — anything you can hear. \n\nAudio sources: \n• System Audio: Capture sound from any application (meetings, videos, music) \n• Microphone: Record your voice or room audio \n• Both: Record system and mic together for complete meeting capture \n\nHow to start recording: \n• Click the large red record button on the main screen \n• Select your audio sources (system, mic, or both) \n• The timer starts and you'll see a visual indicator \n• Click stop when done — your recording is saved automatically Tip: You can pause and resume recordings without creating multiple files."
+    },
+    {
+      "category": "features",
+      "question": "What transcription options are available?",
+      "answer": "AI Transcription converts speech to text with accurate, timestamped transcripts ready in minutes. Service Cost Speed Accuracy Apple Speech Free (built-in) Fast Good OpenAI Whisper ~$0.006/min Fast Excellent AssemblyAI ~$0.0065/min Fast Excellent + Speaker ID \n\nApple Speech requires no setup and works offline. BYOK services offer higher accuracy but require API keys."
+    },
+    {
+      "category": "features",
+      "question": "What AI summaries does SoundMindAI generate?",
+      "answer": "Smart Summaries — Get AI-generated summaries, bullet points, and action items. Choose from Claude, GPT-4, Gemini, and more. \n\nSoundMindAI extracts meaningful insights from your transcripts: \n• Summary: Concise overview of the content \n• Key Points: Important highlights and takeaways \n• Action Items: Tasks and follow-ups identified from the conversation \n\nEach item includes timestamps so you can jump to the relevant part of the recording. Tip: Different AI providers have different strengths. Experiment to find what works best for your content."
+    },
+    {
+      "category": "features",
+      "question": "How do I organize my recordings?",
+      "answer": "Stay Organized — Tag, search, and filter your recordings. Find any meeting instantly with full-text search. \n• Tags: Add custom tags with colors to categorize recordings \n• Search: Full-text search across titles, transcripts, and tags \n• Sort: Sort by date, duration, or name \n• Filter: Filter by tags, date range, or transcription status \n\nAdding tags: \n• Select a recording from your library \n• Click the Tags section in the detail view \n• Type a tag name and press Enter, or select from existing tags \n• Click the color dot to change tag color"
+    },
+    {
+      "category": "features",
+      "question": "How does click-to-seek work?",
+      "answer": "Click-to-Seek — Jump to any moment in your recording. Click on any transcript line to hear exactly what was said. \n\nHow it works: \n• Every transcript segment has a timestamp \n• Click any segment to jump the audio player to that exact moment \n• The current segment highlights as the audio plays \n• Works with summaries and action items too — click to hear the context \n\nNavigation shortcuts: \n• Use arrow keys to move between segments \n• Press Space to play/pause \n• Click timestamps in summaries to jump to that point"
+    },
+    {
+      "category": "features",
+      "question": "How do I import existing audio and video files?",
+      "answer": "Import Any Media — Drop in MP3, MP4, M4A, WAV, and more to transcribe and summarize. \n\nSupported formats: \n• Audio: MP3, M4A, WAV, CAF, AIFF \n• Video: MP4, MOV (audio is extracted automatically) \n\nHow to import: \n• Drag and drop files directly onto the SoundMindAI window \n• Or use File > Import from the menu bar \n• The file is added to your library and ready for transcription \n\nUse cases: \n• Transcribe podcast episodes you want to reference \n• Process lecture recordings from school \n• Import voice memos recorded on your phone \n• Extract insights from interview recordings Tip: Imported files stay in their original location — SoundMindAI references them without duplicating."
+    },
+    {
+      "category": "features",
+      "question": "What export options are available?",
+      "answer": "Export Anywhere — Export transcripts and summaries in multiple formats. \n\nExport formats: \n• Plain Text (.txt): Simple text format \n• Markdown (.md): Formatted for documentation \n• HTML (.html): Web-ready with styling \n• SRT Subtitles (.srt): For video editing and YouTube \n• VTT Subtitles (.vtt): Web video subtitle format \n\nExport options: \n• Include or exclude timestamps \n• Include or exclude speaker labels \n• Export transcript, summary, or both"
+    },
+    {
+      "category": "features",
+      "question": "What is AI Chat and how do I use it?",
+      "answer": "AI Chat — Ask questions about your recordings and get instant AI-powered answers. \n\nHow to use AI Chat: \n• Open a recording that has been transcribed \n• Click the \"Chat\" tab in the detail view \n• Type your question (e.g., \"What were the main decisions made?\") \n• The AI will analyze the transcript and provide an answer \n\nExample questions: \n• \"What action items were discussed?\" \n• \"Summarize what John said about the budget\" \n• \"What were the concerns raised about the timeline?\" \n• \"List all the names mentioned in this meeting\" Tip: AI Chat uses your configured AI provider (OpenAI, Anthropic, etc.). Make sure you have an AI provider set up in Settings."
+    },
+    {
+      "category": "features",
+      "question": "Can I edit transcripts?",
+      "answer": "Transcript Editing — Edit text, split or merge segments, and manage speaker names. Full control over your transcripts. \n• Edit text: Click on any transcript segment to edit the text directly \n• Split segments: Break a long segment into two separate parts \n• Merge segments: Combine adjacent segments into one \n• Manage speakers: Assign or change the speaker for any segment \n• Auto-save: All changes are saved automatically \n\nOriginal timestamps are preserved when editing text, and adjusted appropriately when splitting segments."
+    },
+    {
+      "category": "features",
+      "question": "What is speaker diarization?",
+      "answer": "Speaker Diarization — Know who said what with automatic speaker identification. \n\nSpeaker diarization automatically identifies and labels different speakers in a recording (e.g., \"Speaker 1\", \"Speaker 2\"). \n\nHow to enable it: \n• Set up an AssemblyAI API key in Settings \n• Select AssemblyAI as your transcription provider \n• Transcribe your recording — speakers are automatically detected \n• Rename generic labels (Speaker 1, Speaker 2) to actual names \n\nSpeaker management: \n• Click the person icon next to any segment to change the speaker \n• Click the pencil icon to rename a speaker (updates everywhere) \n• Choose custom colors to easily distinguish speakers \n• Filter transcript by speaker to see only their segments \n\nNote: Speaker diarization is only available with AssemblyAI. Apple Speech and OpenAI Whisper do not support automatic speaker identification."
+    },
+    {
+      "category": "features",
+      "question": "How do I bookmark important parts of a transcript?",
+      "answer": "Bookmarks let you mark and quickly find important moments in your transcripts. \n\nAdding bookmarks: \n• Click the bookmark icon next to any transcript segment \n• The icon fills in to indicate it's bookmarked \n• Click again to remove the bookmark \n\nFiltering by bookmarks: \n• Click the bookmark filter button in the transcript toolbar \n• Only bookmarked segments will be shown \n• Click again to show all segments Tip: Bookmarks are great for marking action items, important quotes, or moments you want to revisit."
+    },
+    {
+      "category": "features",
+      "question": "What is AI Split and how does it work?",
+      "answer": "AI Split intelligently breaks large transcript blocks into smaller, readable chunks using AI analysis. \n\nWhy use AI Split? \n• Some transcription services return one giant wall of text \n• Long paragraphs are hard to read and navigate \n• AI Split adds logical breaks for sentences, paragraphs, or speaker changes \n\nHow to use AI Split: \n• Open a recording with a transcript \n• Click the \"AI Split\" button in the transcript toolbar \n• The AI will analyze the content and add appropriate breaks \n• Your transcript becomes easier to read and skim Tip: AI Split uses your configured AI provider. Results may vary depending on the model used."
+    },
+    {
+      "category": "recording",
+      "question": "How do I start a recording?",
+      "answer": "Starting a recording is simple: Click the Record Button \n\nClick the large red record button on the main screen, or use the keyboard shortcut"
+    },
+    {
+      "category": "recording",
+      "question": "What is the Mini Recorder view?",
+      "answer": "Mini Recorder — A compact, floating window that stays on top while you work, perfect for long recording sessions. \n\nHow to use Mini Recorder: \n• Start a recording from the main window \n• Click the \"Mini\" button in the recording controls \n• The main window hides and a small floating panel appears \n• The mini panel shows recording time, controls, and audio levels \n• Click \"Restore\" to return to the full window \n\nMini Recorder features: \n• Always on top: Stays visible above other windows (toggle on/off) \n• Compact design: Minimal footprint on your screen \n• Full controls: Pause, resume, mute mic, and stop recording \n• Audio level indicator: Visual feedback of recording levels \n• Draggable: Position anywhere on your screen Tip: Mini Recorder is perfect for recording meetings while taking notes in other apps, or for long recording sessions where you don't need the full interface."
+    },
+    {
+      "category": "recording",
+      "question": "How does auto-stop after silence work?",
+      "answer": "Auto-stop After Silence — Automatically stops recording when no audio is detected for a configurable duration. Perfect for hands-free recording sessions. \n\nHow it works: \n• During recording, SoundMindAI monitors audio levels \n• When audio drops below a threshold (very quiet/silence), a timer starts \n• If silence continues for the configured duration, recording stops automatically \n• Any sound resets the silence timer \n\nHow to configure: \n• Open Settings (⌘,) or click the gear icon \n• Scroll to the Audio section \n• Toggle \"Auto-stop recordings after silence\" on or off \n• Set your desired duration and unit (seconds, minutes, or hours) \n\nUse cases: \n• Recording a meeting that might end early — the recording stops itself \n• Capturing voice memos without needing to manually stop \n• Recording background audio where you want to stop after extended silence \n\nSettings: \n• Duration: Set from 15 seconds up to hours \n• Units: Choose seconds, minutes, or hours \n• Default: Enabled with 5 minutes Tip: 5 minutes is a good default to avoid premature stops during natural conversation pauses."
+    },
+    {
+      "category": "recording",
+      "question": "Can I record system audio from specific applications?",
+      "answer": "SoundMindAI captures all system audio output. To record specific applications: \n• Mute applications you don't want to record \n• Use the application's own audio settings to control volume \n• Consider using a virtual audio device for more control \n\nFuture versions may include per-application audio selection."
+    },
+    {
+      "category": "recording",
+      "question": "How do I import existing audio files?",
+      "answer": "You can import audio files for transcription: \n• Drag and drop audio files onto the SoundMindAI window \n• Use File > Import Audio or the keyboard shortcut \n• Select files from the file browser \n\nSupported formats: M4A, MP3, WAV, CAF, AIFF, MP4, MOV"
+    },
+    {
+      "category": "recording",
+      "question": "Where are my recordings stored?",
+      "answer": "By default, recordings are stored in: ~/Library/Application Support/SoundMindAI/Recordings/ \n\nYou can change the storage location in Settings > Storage. All recordings remain on your Mac - nothing is uploaded to the cloud."
+    },
+    {
+      "category": "transcription",
+      "question": "What transcription options are available?",
+      "answer": "SoundMindAI offers multiple transcription options: Service Cost Speed Accuracy Apple Speech Free (built-in) Fast Good OpenAI Whisper ~$0.006/min Fast Excellent AssemblyAI ~$0.0065/min Fast Excellent \n\nApple Speech requires no setup and works offline. BYOK services offer higher accuracy but require API keys."
+    },
+    {
+      "category": "transcription",
+      "question": "What are the limitations of Apple Speech (native) transcription?",
+      "answer": "Apple's built-in Speech Recognition has the following limitations: Mode Duration Limit Notes Server-based 1 minute Hard limit, recognition stops after 60 seconds On-device ~5 minutes recommended No hard limit, but becomes unreliable for longer recordings Request limit 1000/hour per device Shared across all apps on the device \n\nSoundMindAI enforces a 5-minute limit for native transcription to ensure reliability. For longer recordings, use OpenAI Whisper or AssemblyAI. Important: If you have recordings longer than 5 minutes, configure a cloud transcription provider (Whisper or AssemblyAI) in Settings. These services have no practical duration limits and offer higher accuracy."
+    },
+    {
+      "category": "transcription",
+      "question": "How do I view a recording's transcript and summary?",
+      "answer": "There are three ways to open the detail view for any recording: \n• Double-click on the recording in your library \n• Select a recording and click the \"Transcript & Summary\" button \n• Click the document icon next to the recording \n\nThe detail view shows tabs for Summary, Transcript, Notes, Source, Tags, and AI Chat. You can navigate between tabs to access different aspects of your recording. Tip: Double-clicking is the fastest way to open a recording. The detail view includes playback controls so you can listen while reading the transcript."
+    },
+    {
+      "category": "transcription",
+      "question": "How do I transcribe a recording?",
+      "answer": "After recording or importing audio: \n• Select the recording from your library \n• Click \"Transcribe\" or use the keyboard shortcut \n• Choose your transcription service (Apple Speech or BYOK) \n• Wait for transcription to complete \n\nTranscripts appear in the detail view with timestamps for easy navigation."
+    },
+    {
+      "category": "transcription",
+      "question": "Can I edit transcripts?",
+      "answer": "Yes! SoundMindAI provides comprehensive transcript editing: \n• Edit text: Click on any transcript segment to edit the text directly \n• Split segments: Break a long segment into two separate parts at a specific point \n• Merge segments: Combine adjacent segments into one \n• Manage speakers: Assign or change the speaker for any segment \n• Auto-save: All changes are saved automatically \n\nOriginal timestamps are preserved when editing text, and adjusted appropriately when splitting segments."
+    },
+    {
+      "category": "transcription",
+      "question": "How do I manage speakers in transcripts?",
+      "answer": "SoundMindAI makes it easy to identify and organize speakers: \n\nChanging a speaker: \n• Click the person icon next to any transcript segment \n• Select from existing speakers or create a new one \n• The change applies to that segment only \n\nEditing speakers (rename & color): \n• Click the pencil icon next to a speaker name \n• Change the name (e.g., \"Speaker 1\" → \"John\") - updates everywhere that speaker appears \n• Choose a custom color from 8 options to easily distinguish speakers \n\nFiltering by speaker: \n• Click the speaker filter dropdown (person icon) in the transcript toolbar \n• Select a specific speaker to show only their segments \n• Select \"All Speakers\" to show the full transcript again Tip: Use AssemblyAI for automatic speaker diarization - it will automatically identify and label different speakers in your recording."
+    },
+    {
+      "category": "transcription",
+      "question": "What is speaker diarization?",
+      "answer": "Speaker diarization automatically identifies and labels different speakers in a recording (e.g., \"Speaker 1\", \"Speaker 2\"). \n\nHow to enable it: \n• Set up an AssemblyAI API key in Settings \n• Select AssemblyAI as your transcription provider \n• Transcribe your recording - speakers are automatically detected \n• Rename generic labels (Speaker 1, Speaker 2) to actual names \n\nNote: Speaker diarization is only available with AssemblyAI. Apple Speech and OpenAI Whisper do not support automatic speaker identification."
+    },
+    {
+      "category": "transcription",
+      "question": "How do I bookmark important parts of a transcript?",
+      "answer": "Bookmarks let you mark and quickly find important moments in your transcripts: \n\nAdding bookmarks: \n• Click the bookmark icon next to any transcript segment \n• The icon fills in to indicate it's bookmarked \n• Click again to remove the bookmark \n\nFiltering by bookmarks: \n• Click the bookmark filter button in the transcript toolbar \n• Only bookmarked segments will be shown \n• Click again to show all segments \n\nBookmarks are saved with your recording and persist across sessions."
+    },
+    {
+      "category": "summarization",
+      "question": "What AI summaries does SoundMindAI generate?",
+      "answer": "SoundMindAI uses AI to extract meaningful insights from your transcripts: \n• Summary: Concise overview of the content \n• Key Points: Important highlights and takeaways \n• Action Items: Tasks and follow-ups identified from the conversation \n\nEach item includes timestamps so you can jump to the relevant part of the recording."
+    },
+    {
+      "category": "summarization",
+      "question": "Which AI providers are supported?",
+      "answer": "SoundMindAI supports multiple AI providers for summarization: \n• OpenAI - GPT-4o, GPT-4, GPT-3.5-turbo \n• Anthropic - Claude 3.5 Sonnet, Claude 3 Opus \n• Google - Gemini 1.5 Pro, Gemini 1.5 Flash \n• HuggingFace - Various open-source models \n• OpenRouter - Access multiple providers through one API \n\nEach provider has different strengths - experiment to find what works best for your content."
+    },
+    {
+      "category": "summarization",
+      "question": "How much does AI summarization cost?",
+      "answer": "Costs vary by provider and model. Typical costs for summarizing a 1-hour transcript: \n• GPT-4o: ~$0.05-0.15 \n• GPT-3.5-turbo: ~$0.01-0.03 \n• Claude 3.5 Sonnet: ~$0.05-0.10 \n• Gemini 1.5 Flash: ~$0.01-0.02 \n\nCosts depend on transcript length. You pay directly to your chosen provider - SoundMindAI doesn't add any markup."
+    },
+    {
+      "category": "summarization",
+      "question": "Why are there mistakes in my transcript or summary?",
+      "answer": "SoundMindAI uses third-party AI services for transcription and summarization. We pass your audio/text directly to your chosen provider and display their results. \n\nCommon causes of errors: \n• Transcription errors: Background noise, accents, technical jargon, or multiple speakers can affect accuracy \n• Summary inaccuracies: AI models may misinterpret context, omit details, or occasionally \"hallucinate\" information \n• Model limitations: Different AI providers and models have varying accuracy levels \n\nImportant: SoundMindAI is not responsible for the accuracy of AI-generated transcripts or summaries. We simply pass your content to your chosen AI provider and display their output. Always review AI-generated content for accuracy, especially for important meetings or sensitive information. Tip: You can edit transcripts directly in the app to correct any errors. Try different AI providers to find the best results for your content type."
+    },
+    {
+      "category": "summarization",
+      "question": "What is AI Chat and how do I use it?",
+      "answer": "AI Chat lets you ask questions about your recordings and get instant answers based on the transcript content. \n\nHow to use AI Chat: \n• Open a recording that has been transcribed \n• Click the \"Chat\" tab in the detail view \n• Type your question (e.g., \"What were the main decisions made?\") \n• The AI will analyze the transcript and provide an answer \n\nExample questions: \n• \"What action items were discussed?\" \n• \"Summarize what John said about the budget\" \n• \"What were the concerns raised about the timeline?\" \n• \"List all the names mentioned in this meeting\" Tip: AI Chat uses your configured AI provider (OpenAI, Anthropic, etc.). Make sure you have an AI provider set up in Settings."
+    },
+    {
+      "category": "byok",
+      "question": "What does BYOK mean?",
+      "answer": "BYOK stands for \"Bring Your Own Keys.\" Instead of us charging you for AI services, you get API keys directly from the service providers (like OpenAI or Anthropic) and enter them in SoundMindAI. \n\nHere's how it works: \n• You create an account with an AI provider (e.g., OpenAI) \n• You add payment and get an API key from them \n• You enter that API key in SoundMindAI's settings \n• SoundMindAI uses your key to access the AI service \n• You pay the provider directly based on your usage"
+    },
+    {
+      "category": "byok",
+      "question": "Why does SoundMindAI use BYOK instead of including AI?",
+      "answer": "BYOK offers significant advantages for you: \n• Lower cost: Pay wholesale rates directly to providers instead of marked-up prices \n• Choice: Pick the AI provider and model that works best for you \n• Privacy: Your data goes directly to the provider - we never see it \n• Control: Set your own usage limits and budgets \n• No subscription: Pay only for what you use, when you use it Note: You are responsible for understanding and managing costs with each AI provider. We recommend setting usage limits in your provider accounts."
+    },
+    {
+      "category": "byok",
+      "question": "Are my API keys secure?",
+      "answer": "Yes, your API keys are stored securely: \n• Keys are stored in macOS Keychain , the same place your passwords are stored \n• Keys are encrypted using macOS system-level encryption \n• Keys never leave your Mac (except when making API calls to providers) \n• We cannot access, view, or retrieve your keys"
+    },
+    {
+      "category": "byok",
+      "question": "How much do AI services cost? (Estimated Pricing)",
+      "answer": "Below are estimated costs for supported AI providers. Actual costs depend on your usage and current provider pricing. Transcription Services Provider Cost per Minute 1-Hour Recording Apple Speech Free $0.00 OpenAI Whisper ~$0.006 ~$0.36 AssemblyAI ~$0.006 ~$0.37 AI Summarization Services \n\nEstimated cost to summarize a 1-hour transcript (~12,000 words) Provider Model Est. Cost OpenAI GPT-4o ~$0.05 - $0.15 OpenAI GPT-4o-mini ~$0.01 - $0.03 Anthropic Claude 3.5 Sonnet ~$0.04 - $0.10 Google Gemini 1.5 Flash ~$0.01 - $0.02 Google Gemini 1.5 Pro ~$0.02 - $0.06 Example: Total Cost for 1-Hour Meeting Setup Transcription Summary Total Budget Apple Speech (free) Gemini Flash (~$0.01) ~$0.01 Balanced Whisper (~$0.36) GPT-4o-mini (~$0.02) ~$0.38 Premium AssemblyAI (~$0.37) GPT-4o (~$0.10) ~$0.47 Important Disclaimer: These are rough estimates only and may not reflect current pricing. AI provider pricing changes frequently. Always check the official pricing pages for the most accurate and up-to-date information: \n• OpenAI Pricing \n• Anthropic Pricing \n• Google AI Pricing \n• AssemblyAI Pricing"
+    },
+    {
+      "category": "setup",
+      "question": "How do I set up SoundMindAI for best results?",
+      "answer": "SoundMindAI uses a BYOK (Bring Your Own Keys) model, which means you connect your own AI service accounts. This gives you lower costs, more privacy, and full control. Here's how to get the best experience: What You'll Set Up 1. Transcription - Converts your audio to text Options: Native macOS (free) or OpenAI Whisper (more accurate) or AssemblyAI"
+    },
+    {
+      "category": "setup",
+      "question": "Recommended setup for best results (5 minutes)",
+      "answer": "For the best transcription accuracy and AI summaries, we recommend OpenAI - one account gives you both Whisper (transcription) and GPT (summarization). Need speaker identification? Use AssemblyAI instead of Whisper for transcription. AssemblyAI supports speaker diarization — it identifies who said what in multi-person recordings. Perfect for meetings with multiple participants. You can still use OpenAI for AI summarization."
+    },
+    {
+      "category": "setup",
+      "question": "Alternative: Free setup with native transcription",
+      "answer": "If you prefer not to set up API keys, SoundMindAI works out of the box with native macOS transcription : \n• Transcription: Uses Apple's built-in Speech Recognition (free, on-device) \n• AI Summarization: Not available without an API key \n\nLimitations of native transcription: \n• Limited to recordings under 5 minutes \n• Less accurate than Whisper for technical content \n• No AI summaries or action items \n\nThis is a good option for quick tests, but for regular use we recommend setting up OpenAI (or AssemblyAI for speaker diarization) for the full experience."
+    },
+    {
+      "category": "setup",
+      "question": "Understanding the status indicators",
+      "answer": "The sidebar shows the status of your transcription and AI providers: Green - Configured and ready to use"
+    },
+    {
+      "category": "setup",
+      "question": "Troubleshooting setup issues",
+      "answer": "\"Invalid API key\" error: \n• Make sure you copied the entire key (no extra spaces) \n• Check that you have billing set up with the provider \n• Try generating a new key if the old one isn't working \n\n\"Insufficient quota\" or \"Rate limit\" error: \n• Add credits or a payment method to your provider account \n• Check your usage limits in the provider's dashboard \n\nTranscription not working: \n• Verify the API key is entered correctly in Settings \n• Check that the correct transcription provider is selected \n• Try the API Diagnostics tool in Settings to test connectivity \n\nStill having issues? See the detailed setup guides below for your specific provider, or check the Troubleshooting section."
+    },
+    {
+      "category": "api-setup",
+      "question": "How to set up OpenAI (Whisper + GPT)",
+      "answer": "OpenAI provides both Whisper (transcription) and GPT (summarization): Create an OpenAI Account \n\nGo to platform.openai.com/signup and create an account"
+    },
+    {
+      "category": "api-setup",
+      "question": "How to set up Anthropic (Claude)",
+      "answer": "Anthropic provides Claude for AI summarization: Create an Anthropic Account \n\nGo to console.anthropic.com and sign up"
+    },
+    {
+      "category": "api-setup",
+      "question": "How to set up Google (Gemini)",
+      "answer": "Google provides Gemini for AI summarization: Go to Google AI Studio \n\nVisit aistudio.google.com and sign in with your Google account"
+    },
+    {
+      "category": "api-setup",
+      "question": "How to set up AssemblyAI (Transcription)",
+      "answer": "AssemblyAI provides high-quality transcription: Create AssemblyAI Account \n\nGo to assemblyai.com and sign up"
+    },
+    {
+      "category": "api-setup",
+      "question": "How to set up OpenRouter (Multiple Providers)",
+      "answer": "OpenRouter lets you access multiple AI providers with one API key: Create OpenRouter Account \n\nGo to openrouter.ai and sign up"
+    },
+    {
+      "category": "organization",
+      "question": "How do I organize my recordings?",
+      "answer": "SoundMindAI provides several ways to organize your recordings: \n• Tags: Add custom tags with colors to categorize recordings \n• Folders: Create folders to group related recordings \n• Search: Search by title, transcript content, or tags \n• Sort: Sort by date, duration, or name \n• Filter: Filter by tags, date range, or transcription status"
+    },
+    {
+      "category": "organization",
+      "question": "How do I add tags to recordings?",
+      "answer": "To add tags: \n• Select a recording from your library \n• Click the Tags section in the detail view \n• Type a tag name and press Enter, or select from existing tags \n• Click the color dot to change tag color \n\nYou can also batch-tag multiple recordings by selecting them first."
+    },
+    {
+      "category": "organization",
+      "question": "Can I select multiple recordings at once?",
+      "answer": "Yes! SoundMindAI supports multi-select for batch operations: \n\nHow to multi-select: \n• Command + Click: Add individual recordings to your selection \n• Shift + Click: Select a range of recordings \n• Command + A: Select all recordings \n\nBatch operations available: \n• Delete multiple recordings at once \n• Add tags to multiple recordings \n• Export multiple recordings"
+    },
+    {
+      "category": "organization",
+      "question": "Can I export my recordings and transcripts?",
+      "answer": "Yes! SoundMindAI offers flexible export options: \n\nExport formats: \n• Plain Text (.txt): Simple text format for any application \n• Markdown (.md): Formatted text with headers and styling \n• HTML (.html): Web-ready format with styling \n• JSON (.json): Structured data format for developers \n• SRT (.srt): Subtitle format for video editing \n\nWhat you can export: \n• Full transcript with timestamps and speakers \n• AI-generated summary, key points, and action items \n• Original audio file (M4A) \n\nAccess export via File > Export, the toolbar button, or right-click on a recording."
+    },
+    {
+      "category": "organization",
+      "question": "How do I delete recordings?",
+      "answer": "To delete recordings: \n• Select the recording(s) you want to delete \n• Press Delete or right-click and select \"Delete\" \n• Confirm deletion in the dialog Warning: Deleted recordings are permanently removed. Consider exporting important recordings before deleting."
+    },
+    {
+      "category": "playback",
+      "question": "How do I play back recordings?",
+      "answer": "Select a recording and use the built-in player: \n• Play/Pause: Space bar or play button \n• Seek: Click anywhere on the timeline \n• Skip: Arrow keys for 5-second jumps \n• Speed: Adjust playback speed (0.5x to 2x) \n• Volume: Use the volume slider"
+    },
+    {
+      "category": "playback",
+      "question": "Can I jump to specific parts of a recording?",
+      "answer": "Yes! Click on any timestamped item to jump to that position: \n• Click transcript segments to jump to that part \n• Click key points to hear the relevant section \n• Click action items to hear the context \n\nTimestamps are clickable throughout the interface."
+    },
+    {
+      "category": "legal",
+      "question": "What are my legal obligations when using SoundMindAI?",
+      "answer": "By downloading, installing, or using SoundMindAI, you agree to the following: \n• You will research and understand all recording consent laws applicable to your jurisdiction before making any recordings \n• You will obtain all necessary permissions, consents, and disclosures required by law before recording any conversation \n• You will comply with all applicable laws including but not limited to wiretapping laws, eavesdropping statutes, privacy regulations, workplace policies, and any other relevant regulations \n• You assume full responsibility and liability for all recordings you make and how you use them \n• You will not use the software for any illegal, unauthorized, or harmful purpose LEGAL NOTICE: SoundMindAI is a recording tool. We do not monitor, control, or have any knowledge of what you record. YOU ARE SOLELY AND ENTIRELY RESPONSIBLE for ensuring your use complies with all applicable laws. Failure to comply with recording consent laws may result in civil liability, criminal penalties, or both. If you are unsure about the legality of recording in any situation, DO NOT RECORD until you have consulted with a qualified attorney licensed in your jurisdiction."
+    },
+    {
+      "category": "legal",
+      "question": "What happens if I violate recording laws?",
+      "answer": "You bear all consequences. GrowTech Development, LLC and SoundMindAI have no liability whatsoever for your use of the software. \n\nBy using SoundMindAI, you agree to: \n• Indemnify and hold harmless GrowTech Development, LLC, its officers, directors, employees, and affiliates from any and all claims, damages, losses, costs, and legal fees arising from your use of the software \n• Defend us against any third-party claims resulting from your recordings or use of the software \n• Accept that we have no obligation to provide legal assistance, advice, or support if you face legal action \n\nThis indemnification obligation survives termination of your license and continues indefinitely. \n\nSee our Terms of Service for complete indemnification terms."
+    },
+    {
+      "category": "legal",
+      "question": "Do you verify that my recordings are legal?",
+      "answer": "No. We have no ability or obligation to verify the legality of your recordings. \n\nSoundMindAI is a local application that runs entirely on your Mac. We do not: \n• Monitor what you record \n• Review your recordings for legal compliance \n• Verify that you have obtained required consents \n• Have any knowledge of how you use the software \n\nThe entire burden of legal compliance rests with you. You must independently research applicable laws, obtain required consents, and ensure your recordings are lawful. We provide a tool; you are responsible for using it legally."
+    },
+    {
+      "category": "legal",
+      "question": "What are my obligations regarding AI-generated content?",
+      "answer": "You are solely responsible for verifying and using AI-generated content appropriately. \n\nBy using AI transcription and summarization features, you acknowledge and agree: \n• AI-generated transcripts, summaries, and other content may contain errors, omissions, inaccuracies, or fabricated information \n• You will review and verify all AI-generated content before relying on it \n• You will not hold us liable for any errors in AI output or decisions made based on AI-generated content \n• You assume all risk associated with using AI-generated content for any purpose \n\nWe make no representations or warranties regarding the accuracy, completeness, reliability, or fitness for any purpose of AI-generated content."
+    },
+    {
+      "category": "legal",
+      "question": "What are my obligations regarding third-party AI services?",
+      "answer": "You are solely responsible for your relationship with third-party AI providers. \n\nWhen you use BYOK (Bring Your Own Keys) features, you agree: \n• You will review and accept each provider's terms of service and privacy policy before using their services \n• You are responsible for all charges, fees, and costs incurred with third-party providers \n• You will resolve all disputes with third-party providers directly with them \n• You acknowledge we have no control over third-party services' availability, pricing, data handling, or performance \n• You release us from any liability related to third-party services \n\nYour data is transmitted directly to the providers you choose. Review their privacy policies to understand how they handle your data."
+    },
+    {
+      "category": "legal",
+      "question": "Where are your binding legal terms?",
+      "answer": "By using SoundMindAI, you are bound by the following legal documents: \n• Terms of Service — Includes license terms, acceptable use, disclaimers of warranties, limitation of liability, indemnification, binding arbitration, and class action waiver \n• Privacy Policy — Describes data collection, storage, and your privacy rights \n• Refund Policy — All sales are final; 7-day free trial provided for evaluation \n\nThese terms are legally binding. By downloading or using the software, you acknowledge that you have read, understood, and agree to be bound by these terms. If you do not agree, do not use the software."
+    },
+    {
+      "category": "legal",
+      "question": "Do you provide legal advice?",
+      "answer": "No. Nothing in this FAQ, on our website, or in our software constitutes legal advice. \n\nAll information is provided for general informational purposes only and should not be relied upon as legal guidance. Laws vary by jurisdiction and change over time. \n\nIf you are unclear about any legal requirements or have any doubts about the legality of recording in your situation, you must seek advice from a qualified attorney licensed in your jurisdiction before using the recording features. \n\nGrowTech Development, LLC is a software company. We are not a law firm and do not provide legal services."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "Recording isn't capturing system audio",
+      "answer": "If system audio isn't being captured: \n• Check Screen Recording permission: System Settings > Privacy & Security > Screen Recording. Ensure SoundMindAI is enabled. \n• Restart the app: Quit and relaunch SoundMindAI after granting permission. \n• Check audio source: Ensure \"System Audio\" is selected in recording settings. \n• Test with another app: Play audio from any app while recording to verify."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "Why does my recording sound degraded or echo-y when the microphone is on?",
+      "answer": "This is not a bug in SoundMindAI — it's a fundamental physics issue with audio recording that affects all recording software. What's happening \n\nWhen you record with your microphone enabled and speakers playing audio: \n• Your speakers play the system audio (e.g., a YouTube video, Zoom call) \n• Your microphone picks up that same audio from the room \n• Now you have two copies of the same audio: the clean digital original + a degraded room recording \n• During playback, these two copies interfere with each other, causing phasing, echo, and a \"hollow\" or \"underwater\" sound The solution: Use headphones \n\nWearing headphones while recording completely solves this issue: \n• Headphones isolate audio — the sound goes directly to your ears, not into the room \n• Your mic only captures your voice — clean, isolated input with no speaker bleed \n• Result: Crystal-clear recordings with no phasing or echo If you can't use headphones \n• Mute your mic during recording if you don't need to capture your voice. SoundMindAI sets mic playback to 0% by default for clean system audio. \n• Lower your speaker volume to reduce how much the mic picks up \n• Position your mic away from speakers if using an external microphone Pro tip: For the best recording quality, always use headphones when recording meetings, calls, or any audio where you need both system audio and your microphone. This is standard practice in professional audio production."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "\"Required permissions not granted\" error (even when permissions are enabled)",
+      "answer": "After updating SoundMindAI, you may see a \"Required permissions not granted\" error even though the permission toggles appear enabled in System Settings. This happens because macOS caches permissions based on the app's code signature, which changes with each update. Quick Fix \n• Open System Settings > Privacy & Security > Screen & System Audio Recording \n• Click the minus (-) button to remove SoundMindAI from the list entirely \n• Quit SoundMindAI completely (Cmd+Q) \n• Relaunch SoundMindAI - it will prompt for permission again \n• Click Allow when prompted Nuclear Reset (if Quick Fix doesn't work) \n\nOpen Terminal and run these commands to completely reset permissions: tccutil reset ScreenCapture com.robertgrow.SoundMindAI\ntccutil reset Microphone com.robertgrow.SoundMindAI \n\nThen: \n• Quit SoundMindAI completely \n• Relaunch the app \n• Grant permissions when prompted Why does this happen? macOS ties permissions to an app's code signature. When SoundMindAI is updated and re-signed, macOS may not recognize it as the same app that was previously granted permission, even though the toggle still appears \"on\" in System Settings."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "Transcription is failing or stuck",
+      "answer": "If transcription isn't working: \n• Recording too long (Apple Speech): Native transcription is limited to 5 minutes. For longer recordings, configure Whisper or AssemblyAI in Settings. \n• Apple Speech: Ensure your Mac has an internet connection (required for some languages) \n• BYOK services: Verify your API key is correct in Settings \n• Check credits: Ensure you have available credits/balance with your AI provider \n• File format: Ensure the audio file is in a supported format Tip: If transcription gets stuck, you can cancel it using the X button next to the progress bar, then restart with a different provider."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "API key errors",
+      "answer": "If you're seeing API key errors: \n• Invalid key: Double-check you copied the entire key with no extra spaces \n• Expired key: Some providers expire unused keys. Generate a new one. \n• No credits: Check your provider account for available balance \n• Rate limited: Wait a moment and try again \n\nYou can test your API keys in Settings by clicking the \"Test\" button next to each key."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "How do I use API Diagnostics?",
+      "answer": "The Diagnose feature helps you test and troubleshoot your API configurations: \n\nHow to access: \n• Click \"Diagnose\" in the sidebar \n• Select the provider you want to test (Transcription or AI) \n• Click \"Run Test\" to verify the connection \n\nWhat diagnostics check: \n• API key validity \n• Network connectivity to the provider \n• Account status and available credits \n• Model availability \n\nWhen to use diagnostics: \n• After entering a new API key \n• When transcription or summarization fails \n• To verify your setup before an important recording \n• After changing providers or models Tip: Run diagnostics after setting up each API key to ensure everything is working before you need it."
+    },
+    {
+      "category": "troubleshooting",
+      "question": "How do I contact support?",
+      "answer": "For support, please email us at: \n\nsupport@soundmindai.net \n\nPlease include: \n• Description of the issue \n• macOS version \n• SoundMindAI version (from About menu) \n• Steps to reproduce the problem \n• Any error messages you see"
+    }
+  ]
+}
