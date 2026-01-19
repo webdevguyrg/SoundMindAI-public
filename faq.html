@@ -1875,6 +1875,37 @@
                 </details>
 
                 <details class="faq-item">
+                    <summary>"Required permissions not granted" error (even when permissions are enabled)</summary>
+                    <div class="faq-item__content">
+                        <p>After updating SoundMindAI, you may see a "Required permissions not granted" error even though the permission toggles appear enabled in System Settings. This happens because macOS caches permissions based on the app's code signature, which changes with each update.</p>
+
+                        <h4>Quick Fix</h4>
+                        <ol>
+                            <li>Open <strong>System Settings > Privacy & Security > Screen & System Audio Recording</strong></li>
+                            <li>Click the <strong>minus (-) button</strong> to remove SoundMindAI from the list entirely</li>
+                            <li><strong>Quit SoundMindAI</strong> completely (Cmd+Q)</li>
+                            <li><strong>Relaunch SoundMindAI</strong> - it will prompt for permission again</li>
+                            <li>Click <strong>Allow</strong> when prompted</li>
+                        </ol>
+
+                        <h4>Nuclear Reset (if Quick Fix doesn't work)</h4>
+                        <p>Open Terminal and run these commands to completely reset permissions:</p>
+                        <pre><code>tccutil reset ScreenCapture com.robertgrow.SoundMindAI
+tccutil reset Microphone com.robertgrow.SoundMindAI</code></pre>
+                        <p>Then:</p>
+                        <ol>
+                            <li>Quit SoundMindAI completely</li>
+                            <li>Relaunch the app</li>
+                            <li>Grant permissions when prompted</li>
+                        </ol>
+
+                        <div class="tip-box">
+                            <strong>Why does this happen?</strong> macOS ties permissions to an app's code signature. When SoundMindAI is updated and re-signed, macOS may not recognize it as the same app that was previously granted permission, even though the toggle still appears "on" in System Settings.
+                        </div>
+                    </div>
+                </details>
+
+                <details class="faq-item">
                     <summary>Transcription is failing or stuck</summary>
                     <div class="faq-item__content">
                         <p>If transcription isn't working:</p>
