@@ -109,6 +109,11 @@
       "answer": "AI Split intelligently breaks large transcript blocks into smaller, readable chunks using AI analysis. \n\nWhy use AI Split? \n• Some transcription services return one giant wall of text \n• Long paragraphs are hard to read and navigate \n• AI Split adds logical breaks for sentences, paragraphs, or speaker changes \n\nHow to use AI Split: \n• Open a recording with a transcript \n• Click the \"AI Split\" button in the transcript toolbar \n• The AI will analyze the content and add appropriate breaks \n• Your transcript becomes easier to read and skim Tip: AI Split uses your configured AI provider. Results may vary depending on the model used."
     },
     {
+      "category": "features",
+      "question": "What is AI Help Chat?",
+      "answer": "AI Help Chat — Get instant answers about SoundMindAI features right in the app. Ask questions and the AI assistant explains how to use any feature. \n\nHow to access AI Help Chat: \n• Click \"AI Help\" in the left sidebar \n• Type your question about any SoundMindAI feature \n• The AI assistant will provide helpful guidance \n\nExample questions: \n• \"How do I set up transcription?\" \n• \"What AI providers are supported?\" \n• \"How do I export my recordings?\" \n• \"What keyboard shortcuts are available?\" \n\nFeatures: \n• Instant answers: No need to search through documentation \n• Contextual help: Answers are specific to SoundMindAI features \n• Works offline: Uses bundled FAQ data when internet is unavailable \n• Conversation history: Ask follow-up questions in the same chat \n\nTip: AI Help Chat is perfect for quickly learning how to use features without leaving the app."
+    },
+    {
       "category": "recording",
       "question": "How do I start a recording?",
       "answer": "Starting a recording is simple: Click the Record Button \n\nClick the large red record button on the main screen, or use the keyboard shortcut"
