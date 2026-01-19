@@ -108,6 +108,14 @@
         },
         {
           "@type": "Question",
+          "name": "Why does my recording sound degraded or echo-y when the microphone is on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This is not a bug — it's a physics issue. When your speakers play audio and your microphone is active, the mic picks up the speaker sound, creating two copies of the same audio that interfere during playback, causing phasing and echo. The solution is to use headphones while recording, which isolates the audio to your ears so your mic only captures your voice. This is standard practice in professional audio production."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "What is AI Split and how does it work?",
           "acceptedAnswer": {
             "@type": "Answer",
@@ -1871,6 +1879,41 @@
                             <li><strong>Check audio source:</strong> Ensure "System Audio" is selected in recording settings.</li>
                             <li><strong>Test with another app:</strong> Play audio from any app while recording to verify.</li>
                         </ol>
+                    </div>
+                </details>
+
+                <details id="audio-quality" class="faq-item">
+                    <summary>Why does my recording sound degraded or echo-y when the microphone is on?</summary>
+                    <div class="faq-item__content">
+                        <p><strong>This is not a bug in SoundMindAI</strong> — it's a fundamental physics issue with audio recording that affects all recording software.</p>
+
+                        <h4>What's happening</h4>
+                        <p>When you record with your microphone enabled and speakers playing audio:</p>
+                        <ol>
+                            <li>Your speakers play the system audio (e.g., a YouTube video, Zoom call)</li>
+                            <li>Your microphone picks up that same audio from the room</li>
+                            <li>Now you have <strong>two copies</strong> of the same audio: the clean digital original + a degraded room recording</li>
+                            <li>During playback, these two copies interfere with each other, causing phasing, echo, and a "hollow" or "underwater" sound</li>
+                        </ol>
+
+                        <h4>The solution: Use headphones</h4>
+                        <p>Wearing headphones while recording completely solves this issue:</p>
+                        <ul>
+                            <li><strong>Headphones isolate audio</strong> — the sound goes directly to your ears, not into the room</li>
+                            <li><strong>Your mic only captures your voice</strong> — clean, isolated input with no speaker bleed</li>
+                            <li><strong>Result:</strong> Crystal-clear recordings with no phasing or echo</li>
+                        </ul>
+
+                        <h4>If you can't use headphones</h4>
+                        <ul>
+                            <li><strong>Mute your mic</strong> during recording if you don't need to capture your voice. SoundMindAI sets mic playback to 0% by default for clean system audio.</li>
+                            <li><strong>Lower your speaker volume</strong> to reduce how much the mic picks up</li>
+                            <li><strong>Position your mic away from speakers</strong> if using an external microphone</li>
+                        </ul>
+
+                        <div class="tip-box">
+                            <strong>Pro tip:</strong> For the best recording quality, always use headphones when recording meetings, calls, or any audio where you need both system audio and your microphone. This is standard practice in professional audio production.
+                        </div>
                     </div>
                 </details>
 
