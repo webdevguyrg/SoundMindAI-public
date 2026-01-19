@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-01-19T17:04:59Z",
-  "faqCount": 75,
+  "generatedAt": "2026-01-19T20:27:17Z",
+  "faqCount": 76,
   "items": [
     {
       "category": "getting-started",
@@ -111,7 +111,7 @@
     {
       "category": "features",
       "question": "What is AI Help Chat?",
-      "answer": "AI Help Chat — Get instant answers about SoundMindAI features right in the app. Ask questions and the AI assistant explains how to use any feature. \n\nHow to access AI Help Chat: \n• Click \"AI Help\" in the left sidebar \n• Type your question about any SoundMindAI feature \n• The AI assistant will provide helpful guidance \n\nExample questions: \n• \"How do I set up transcription?\" \n• \"What AI providers are supported?\" \n• \"How do I export my recordings?\" \n• \"What keyboard shortcuts are available?\" \n\nFeatures: \n• Instant answers: No need to search through documentation \n• Contextual help: Answers are specific to SoundMindAI features \n• Works offline: Uses bundled FAQ data when internet is unavailable \n• Conversation history: Ask follow-up questions in the same chat \n\nTip: AI Help Chat is perfect for quickly learning how to use features without leaving the app."
+      "answer": "AI Help Chat — Get instant answers about SoundMindAI features right in the app. Ask questions and the AI assistant explains how to use any feature. \n\nHow to access AI Help Chat: \n• Click \"AI Help\" in the left sidebar \n• Type your question about any SoundMindAI feature \n• The AI assistant will provide helpful guidance \n\nExample questions: \n• \"How do I set up transcription?\" \n• \"What AI providers are supported?\" \n• \"How do I export my recordings?\" \n• \"What keyboard shortcuts are available?\" \n\nFeatures: \n• Instant answers: No need to search through documentation \n• Contextual help: Answers are specific to SoundMindAI features \n• Works offline: Uses bundled FAQ data when internet is unavailable \n• Conversation history: Ask follow-up questions in the same chat Tip: AI Help Chat is perfect for quickly learning how to use features without leaving the app."
     },
     {
       "category": "recording",
