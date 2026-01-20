@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "generatedAt": "2026-01-19T13:02:09Z",
-  "faqCount": 79,
+  "generatedAt": "2026-01-20T03:21:18Z",
+  "faqCount": 78,
   "items": [
     {
       "category": "getting-started",
@@ -90,6 +90,16 @@
     },
     {
       "category": "features",
+      "question": "What languages are supported? Does SoundMindAI translate?",
+      "answer": "Multi-Language Support + Auto-Translation — Transcribe in 99 languages with automatic detection, and get English translations automatically. \n\nSupported Languages (with OpenAI Whisper): \n\nEnglish, Spanish, Chinese, French, German, Japanese, Korean, Portuguese, Russian, Arabic, Hindi, Italian, Dutch, Polish, Vietnamese, Thai, Turkish, Indonesian, and 40+ more languages. Whisper automatically detects the spoken language — no configuration needed. \n\nAssemblyAI: Also supports automatic language detection when enabled. \n\nApple Speech (Native): Uses your Mac's system language setting. Does not auto-detect. \n\nAutomatic English Translation: \n• After transcription, if the detected language is not English, translation is triggered automatically \n• Your configured AI provider (OpenAI, Anthropic, Gemini, etc.) translates each segment \n• The English translation appears below each original segment in italics \n• Both original and translated text are searchable \n\nRequirements for translation: \n• Use Whisper or AssemblyAI for transcription (for language detection) \n• Have an AI provider configured (OpenAI, Anthropic, Gemini, OpenRouter, or HuggingFace) Note: Translation uses your AI provider and may incur API costs based on transcript length."
+    },
+    {
+      "category": "features",
+      "question": "How do I control automatic translation in Settings?",
+      "answer": "SoundMindAI has a Languages section in Settings where you can control auto-translation behavior. \n\nAuto-Translate to English setting: \n• Location: Settings > Languages section \n• Default: On (enabled) \n• When ON: Non-English transcripts are automatically translated to English after transcription \n• When OFF: Transcription only — no automatic translation is performed \n\nRequirements: \n• An AI provider must be configured (OpenAI, Anthropic, Gemini, OpenRouter, or HuggingFace) \n• The toggle is disabled if no AI provider is set up \n\nManual translation: \n• Even with auto-translate OFF, you can still manually translate individual recordings \n• Open the recording, click Reprocess, and select \"Translate to English\" \n• This option appears for recordings where non-English language was detected Tip: Keep auto-translate ON if you primarily work in English. Turn it OFF if you prefer to keep transcripts in their original language and only translate specific recordings when needed."
+    },
+    {
+      "category": "features",
       "question": "Can I edit transcripts?",
       "answer": "Transcript Editing — Edit text, split or merge segments, and manage speaker names. Full control over your transcripts. \n• Edit text: Click on any transcript segment to edit the text directly \n• Split segments: Break a long segment into two separate parts \n• Merge segments: Combine adjacent segments into one \n• Manage speakers: Assign or change the speaker for any segment \n• Auto-save: All changes are saved automatically \n\nOriginal timestamps are preserved when editing text, and adjusted appropriately when splitting segments."
     },
@@ -111,27 +121,7 @@
     {
       "category": "features",
       "question": "What is AI Help Chat?",
-      "answer": "AI Help Chat — Get instant answers about SoundMindAI features right in the app. Ask questions and the AI assistant explains how to use any feature. \n\nHow to access AI Help Chat: \n• Click \"AI Help\" in the left sidebar \n• Type your question about any SoundMindAI feature \n• The AI assistant will provide helpful guidance \n\nExample questions: \n• \"How do I set up transcription?\" \n• \"What AI providers are supported?\" \n• \"How do I export my recordings?\" \n• \"What keyboard shortcuts are available?\" \n\nFeatures: \n• Instant answers: No need to search through documentation \n• Contextual help: Answers are specific to SoundMindAI features \n• Works offline: Uses bundled FAQ data when internet is unavailable \n• Conversation history: Ask follow-up questions in the same chat \n\nTip: AI Help Chat is perfect for quickly learning how to use features without leaving the app."
-    },
-    {
-      "category": "features",
-      "question": "What languages are supported for transcription?",
-      "answer": "SoundMindAI supports transcription in many languages with automatic language detection:\n\nOpenAI Whisper:\n• Supports 99 languages with automatic detection\n• Languages include: English, Spanish, Chinese, French, German, Japanese, Korean, Portuguese, Russian, Arabic, Hindi, Italian, Dutch, Polish, Vietnamese, Thai, Turkish, Indonesian, and many more\n• No configuration needed — language is detected automatically\n\nAssemblyAI:\n• Supports 99 languages with automatic language detection\n• Speaker diarization available for 95 of those languages\n• Detects the spoken language and transcribes accordingly\n\nApple Speech (Native):\n• Uses your Mac's system language setting\n• Supports multiple languages but does not auto-detect\n\nTip: For multi-language support, use OpenAI Whisper or AssemblyAI — both automatically detect the spoken language without any configuration."
-    },
-    {
-      "category": "features",
-      "question": "Does SoundMindAI translate foreign language transcripts to English?",
-      "answer": "Yes! SoundMindAI automatically translates non-English transcripts to English.\n\nHow it works:\n• After transcription, the app detects the language (via Whisper or AssemblyAI)\n• If the language is not English, translation is triggered automatically\n• Your configured AI provider (OpenAI, Anthropic, Gemini, etc.) translates each segment\n• The English translation appears below each original segment in italics\n\nRequirements:\n• Must have an AI provider configured for summarization (the same provider handles translation)\n• Works with OpenAI, Anthropic Claude, Google Gemini, OpenRouter, and HuggingFace\n\nWhat you'll see:\n• Original text in the detected language\n• English translation displayed below in italicized secondary text\n• Both are selectable and searchable\n\nNote: Translation uses your AI provider and may incur API costs based on transcript length."
-    },
-    {
-      "category": "features",
-      "question": "Can I search for text in translated transcripts?",
-      "answer": "Yes! Search works across both original transcripts and English translations.\n\nHow it works:\n• Type your search term in the transcript search bar\n• SoundMindAI searches both the original language text AND the English translation\n• Matching segments are displayed regardless of which version contains the match\n\nExample:\n• If someone says \"你好\" (nǐ hǎo) in Chinese, and it's translated to \"hello\"\n• Searching for \"你好\" OR \"hello\" will both find that segment\n\nThis makes it easy to find content in foreign language recordings using either the original words or English terms."
-    },
-    {
-      "category": "features",
-      "question": "How do I control automatic translation in Settings?",
-      "answer": "SoundMindAI has a Languages section in Settings where you can control auto-translation behavior.\n\nAuto-Translate to English setting:\n• Location: Settings > Languages section\n• Default: On (enabled)\n• When ON: Non-English transcripts are automatically translated to English after transcription\n• When OFF: Transcription only — no automatic translation is performed\n\nRequirements:\n• An AI provider must be configured (OpenAI, Anthropic, Gemini, OpenRouter, or HuggingFace)\n• The toggle is disabled if no AI provider is set up\n\nManual translation:\n• Even with auto-translate OFF, you can still manually translate individual recordings\n• Open the recording, click Reprocess, and select \"Translate to English\"\n• This option appears for recordings where non-English language was detected\n\nTip: Keep auto-translate ON if you primarily work in English. Turn it OFF if you prefer to keep transcripts in their original language and only translate specific recordings when needed."
+      "answer": "AI Help Chat — Get instant answers about SoundMindAI features right in the app. Ask questions and the AI assistant explains how to use any feature. \n\nHow to access AI Help Chat: \n• Click \"AI Help\" in the left sidebar \n• Type your question about any SoundMindAI feature \n• The AI assistant will provide helpful guidance \n\nExample questions: \n• \"How do I set up transcription?\" \n• \"What AI providers are supported?\" \n• \"How do I export my recordings?\" \n• \"What keyboard shortcuts are available?\" \n\nFeatures: \n• Instant answers: No need to search through documentation \n• Contextual help: Answers are specific to SoundMindAI features \n• Works offline: Uses bundled FAQ data when internet is unavailable \n• Conversation history: Ask follow-up questions in the same chat Tip: AI Help Chat is perfect for quickly learning how to use features without leaving the app."
     },
     {
       "category": "recording",
