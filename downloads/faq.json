@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "generatedAt": "2026-01-19T13:02:09Z",
-  "faqCount": 78,
+  "faqCount": 79,
   "items": [
     {
       "category": "getting-started",
@@ -127,6 +127,11 @@
       "category": "features",
       "question": "Can I search for text in translated transcripts?",
       "answer": "Yes! Search works across both original transcripts and English translations.\n\nHow it works:\n• Type your search term in the transcript search bar\n• SoundMindAI searches both the original language text AND the English translation\n• Matching segments are displayed regardless of which version contains the match\n\nExample:\n• If someone says \"你好\" (nǐ hǎo) in Chinese, and it's translated to \"hello\"\n• Searching for \"你好\" OR \"hello\" will both find that segment\n\nThis makes it easy to find content in foreign language recordings using either the original words or English terms."
+    },
+    {
+      "category": "features",
+      "question": "How do I control automatic translation in Settings?",
+      "answer": "SoundMindAI has a Languages section in Settings where you can control auto-translation behavior.\n\nAuto-Translate to English setting:\n• Location: Settings > Languages section\n• Default: On (enabled)\n• When ON: Non-English transcripts are automatically translated to English after transcription\n• When OFF: Transcription only — no automatic translation is performed\n\nRequirements:\n• An AI provider must be configured (OpenAI, Anthropic, Gemini, OpenRouter, or HuggingFace)\n• The toggle is disabled if no AI provider is set up\n\nManual translation:\n• Even with auto-translate OFF, you can still manually translate individual recordings\n• Open the recording, click Reprocess, and select \"Translate to English\"\n• This option appears for recordings where non-English language was detected\n\nTip: Keep auto-translate ON if you primarily work in English. Turn it OFF if you prefer to keep transcripts in their original language and only translate specific recordings when needed."
     },
     {
       "category": "recording",
