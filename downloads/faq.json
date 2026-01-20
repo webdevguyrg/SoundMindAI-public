@@ -56,7 +56,7 @@
     {
       "category": "features",
       "question": "What transcription options are available?",
-      "answer": "AI Transcription converts speech to text with accurate, timestamped transcripts ready in minutes. Service Cost Speed Accuracy Apple Speech Free (built-in) Fast Good OpenAI Whisper ~$0.006/min Fast Excellent AssemblyAI ~$0.0065/min Fast Excellent + Speaker ID \n\nApple Speech requires no setup and works offline. BYOK services offer higher accuracy but require API keys."
+      "answer": "AI Transcription converts speech to text with accurate, timestamped transcripts ready in minutes. Service Cost Speed Accuracy Apple Speech Free (built-in) Fast Good OpenAI Whisper ~$0.006/min Fast Excellent AssemblyAI ~$0.003/min Fast Excellent + Speaker ID \n\nApple Speech requires no setup and works offline. BYOK services offer higher accuracy but require API keys."
     },
     {
       "category": "features",
@@ -146,7 +146,7 @@
     {
       "category": "transcription",
       "question": "What transcription options are available?",
-      "answer": "SoundMindAI offers multiple transcription options: Service Cost Speed Accuracy Apple Speech Free (built-in) Fast Good OpenAI Whisper ~$0.006/min Fast Excellent AssemblyAI ~$0.0065/min Fast Excellent \n\nApple Speech requires no setup and works offline. BYOK services offer higher accuracy but require API keys."
+      "answer": "SoundMindAI offers multiple transcription options: Service Cost Speed Accuracy Apple Speech Free (built-in) Fast Good OpenAI Whisper ~$0.006/min Fast Excellent AssemblyAI ~$0.003/min Fast Excellent \n\nApple Speech requires no setup and works offline. BYOK services offer higher accuracy but require API keys."
     },
     {
       "category": "transcription",
@@ -226,7 +226,7 @@
     {
       "category": "byok",
       "question": "How much do AI services cost? (Estimated Pricing)",
-      "answer": "Below are estimated costs for supported AI providers. Actual costs depend on your usage and current provider pricing. Transcription Services Provider Cost per Minute 1-Hour Recording Apple Speech Free $0.00 OpenAI Whisper ~$0.006 ~$0.36 AssemblyAI ~$0.006 ~$0.37 AI Summarization Services \n\nEstimated cost to summarize a 1-hour transcript (~12,000 words) Provider Model Est. Cost OpenAI GPT-4o ~$0.05 - $0.15 OpenAI GPT-4o-mini ~$0.01 - $0.03 Anthropic Claude 3.5 Sonnet ~$0.04 - $0.10 Google Gemini 1.5 Flash ~$0.01 - $0.02 Google Gemini 1.5 Pro ~$0.02 - $0.06 Example: Total Cost for 1-Hour Meeting Setup Transcription Summary Total Budget Apple Speech (free) Gemini Flash (~$0.01) ~$0.01 Balanced Whisper (~$0.36) GPT-4o-mini (~$0.02) ~$0.38 Premium AssemblyAI (~$0.37) GPT-4o (~$0.10) ~$0.47 Important Disclaimer: These are rough estimates only and may not reflect current pricing. AI provider pricing changes frequently. Always check the official pricing pages for the most accurate and up-to-date information: \n• OpenAI Pricing \n• Anthropic Pricing \n• Google AI Pricing \n• AssemblyAI Pricing"
+      "answer": "Below are estimated costs for supported AI providers. Actual costs depend on your usage and current provider pricing. Transcription Services Provider Cost per Minute 1-Hour Recording Apple Speech Free $0.00 OpenAI Whisper ~$0.006 ~$0.36 AssemblyAI ~$0.003 ~$0.18 AI Summarization Services \n\nEstimated cost to summarize a 1-hour transcript (~12,000 words) Provider Model Est. Cost OpenAI GPT-4o ~$0.05 - $0.15 OpenAI GPT-4o-mini ~$0.01 - $0.03 Anthropic Claude 3.5 Sonnet ~$0.04 - $0.10 Google Gemini 1.5 Flash ~$0.01 - $0.02 Google Gemini 1.5 Pro ~$0.02 - $0.06 Example: Total Cost for 1-Hour Meeting Setup Transcription Summary Total Budget Apple Speech (free) Gemini Flash (~$0.01) ~$0.01 Balanced Whisper (~$0.36) GPT-4o-mini (~$0.02) ~$0.38 Premium AssemblyAI (~$0.18) GPT-4o (~$0.10) ~$0.28 Important Disclaimer: These are rough estimates only and may not reflect current pricing. AI provider pricing changes frequently. Always check the official pricing pages for the most accurate and up-to-date information: \n• OpenAI Pricing \n• Anthropic Pricing \n• Google AI Pricing \n• AssemblyAI Pricing"
     },
     {
       "category": "setup",
